@@ -3,38 +3,16 @@ package com.commpass.app.member.mapper;
 import com.commpass.app.member.vo.MemberVo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface MemberMapper {
 
-
-
     @Insert("INSERT INTO users " +
-            "(" +
-            "id, " +
-            "pwd, " +
-            "name, " +
-            "email, " +
-            "age, " +
-            "address, " +
-            "gender, " +
-            "nick, " +
-            "area_id, " +
-            "theme_id) " +
-            "VALUES (" +
-            "#{id}, " +
-            "#{pwd}, " +
-            "#{name}, " +
-            "#{email}, " +
-            "#{age}, " +
-            "#{address}, " +
-            "#{gender}, " +
-            "#{nick}," +
-            " #{areaId}, " +
-            "#{themeId})"
-    )
-
-
+            "(id, pwd, name, email, age, address, gender, nick) " +
+            "VALUES (#{id}, #{pwd}, #{name}, #{email}, #{age}, #{address}, #{gender}, #{nick})")
     int join(MemberVo vo);
 
-}//class
+    @Select("SELECT COUNT(*) FROM users WHERE id = #{id}")
+    int isDuplicateId(String id);
+}
