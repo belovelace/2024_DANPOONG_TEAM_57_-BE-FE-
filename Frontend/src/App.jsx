@@ -1,11 +1,11 @@
 import { useState } from 'react';
 // import './App.css';
-import MainPage from './pages/MainPage';
-import NotFound from './pages/NotFound';
-import { Button } from './components/ui/button';
+import MainPage from '../../Frontend/src/pages/MainPage';
+import NotFound from '../../Frontend/src/pages/NotFound';
+import { Button } from '../../Frontend/src/components/ui/button';
 import { Route, Routes, Link, useNavigate } from 'react-router-dom';
-import CreateTrip from './pages/CreateTrip';
-import Header from './components/custom/Header';
+import CreateTrip from '../../Frontend/src/pages/CreateTrip';
+import Header from '../../Frontend/src/components/custom/Header';
 
 function App() {
     const [count, setCount] = useState(0);
