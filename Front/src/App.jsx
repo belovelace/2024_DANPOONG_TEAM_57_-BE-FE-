@@ -5,13 +5,14 @@ import NotFound from './pages/NotFound';
 import { Button } from './components/ui/button';
 import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import CreateTrip from './pages/CreateTrip';
-import Header from './components/Header/Header';
+import Header from './components/custom/Header';
 
 function App() {
     const [count, setCount] = useState(0);
 
     return (
-        <div>
+        <>
+            <Header />
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/create-trip" element={<CreateTrip />} />
@@ -20,7 +21,7 @@ function App() {
                 <Route path="*" element={<NotFound />} />
                 {/* <Route path="/edit/:id" element={<Edit />} /> */}
             </Routes>
-        </div>
+        </>
     );
 }
 
