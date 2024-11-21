@@ -22,7 +22,7 @@ public class MemberController {
     public String join() {return "member/join";}
 
     //회원가입 기능
-    @PostMapping
+    @PostMapping("/join")
     public String join(@RequestBody MemberVo vo) {
         int result = service.join(vo);
 
