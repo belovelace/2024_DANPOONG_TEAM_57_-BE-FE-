@@ -31,4 +31,5 @@ public class MemberService {
         return 0; // 성공 반환
     }
 
+    public MemberVo login(MemberVo vo) {return dao.login(vo);}
 }//class
