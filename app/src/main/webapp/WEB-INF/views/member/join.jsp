@@ -30,7 +30,7 @@
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        alert(response.message || '회원가입이 완료되었습니다!');
+                        alert(response.message || '회원가입이 완Preferred travel destination료되었습니다!');
                         window.location.href = '/signup-success'; // 성공 시 리디렉션
                     },
                     error: function (xhr, status, error) {
