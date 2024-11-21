@@ -5,12 +5,36 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
-public class MemberMapper {
+public interface MemberMapper {
 
-    @Insert("INSERT INTO users (id, pwd, name, email, age, address, gender, nick, area_id, theme_id) " +
-            "VALUES (#{id}, #{pwd}, #{name}, #{email}, #{age}, #{address}, #{gender}, #{nick}, #{areaId}, #{themeId})")
-    void insertUser(MemberVo user) {
 
-    }
+
+    @Insert("INSERT INTO users " +
+            "(" +
+            "id, " +
+            "pwd, " +
+            "name, " +
+            "email, " +
+            "age, " +
+            "address, " +
+            "gender, " +
+            "nick, " +
+            "area_id, " +
+            "theme_id) " +
+            "VALUES (" +
+            "#{id}, " +
+            "#{pwd}, " +
+            "#{name}, " +
+            "#{email}, " +
+            "#{age}, " +
+            "#{address}, " +
+            "#{gender}, " +
+            "#{nick}," +
+            " #{areaId}, " +
+            "#{themeId})"
+    )
+
+
+    int join(MemberVo vo);
 
 }//class
