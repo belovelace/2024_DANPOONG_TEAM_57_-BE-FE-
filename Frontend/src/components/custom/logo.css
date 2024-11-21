@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    align-items: center; /* 세로 가운데 정렬 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.logo img {
+    max-height: 26px;
+    margin-right: 6px;
+}
+
+.logo span {
+    font-size: 26px;
+    font-weight: 700; /* px 제거 */
+    color: #012970;
+    font-family: 'Nunito', sans-serif;
+}
