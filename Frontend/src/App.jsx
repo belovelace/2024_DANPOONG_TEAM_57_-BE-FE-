@@ -9,6 +9,8 @@ import Header from '../../Frontend/src/components/custom/Header';
 import LoginPage from './pages/LoginPage';
 import KakaoMap from './pages/KakaoMap';
 import HomePage from './pages/HomePage';
+import SignInPage from './pages/SignInPage';
+import SignUpPage from './pages/SignUpPage';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -25,6 +27,8 @@ function App() {
                 {/* <Route path="/new" element={<New />} /> */}
                 {/* <Route path="/diary/:id" element={<Diary />} /> */}
                 <Route path="*" element={<NotFound />} />
+                <Route path="/log-in" element={<SignInPage />} />
+                <Route path="/sign-up" element={<SignUpPage />} />
                 {/* <Route path="/edit/:id" element={<Edit />} /> */}
             </Routes>
         </>

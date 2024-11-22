@@ -39,7 +39,6 @@ const MainPage = () => {
 
             <div className="popularPlaces">
                 <div className="content">
-                    <h3>Popular Places</h3>
                     <div className="images flex">
                         <img src={alone} />
                         <img src={friend} />
