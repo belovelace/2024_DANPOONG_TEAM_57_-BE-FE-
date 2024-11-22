@@ -1,3 +1,4 @@
+import waypointDirection from '@/util/waypointDirection';
 import React, { useEffect, useRef } from 'react';
 import.meta.env.VITE_KAKAO_REST_API_KEY;
 
@@ -15,7 +16,7 @@ const KakaoMap = () => {
             // 지도 옵션 설정
             const options = {
                 center: new kakao.maps.LatLng(37.5665, 126.978), // 서울의 위도, 경도
-                level: 4, // 확대 레벨
+                level: 6, // 확대 레벨
             };
 
             // 지도 생성
@@ -23,9 +24,9 @@ const KakaoMap = () => {
 
             // 마커 위치 데이터
             const locations = [
-                { title: '장소 1', lat: 37.5665, lng: 126.978 }, // 서울
-                { title: '장소 2', lat: 37.5655, lng: 126.976 }, // 근처 위치 1
-                { title: '장소 3', lat: 37.5645, lng: 126.974 }, // 근처 위치 2
+                { title: '장소 1', lat: 37.5665, lng: 126.978 }, // 서울 (시청 근처)
+                { title: '장소 2', lat: 37.58, lng: 126.983 }, // 북촌 한옥마을 근처
+                { title: '장소 3', lat: 37.55, lng: 126.99 }, // 이태원 근처
             ];
 
             // 마커 생성
@@ -39,6 +40,93 @@ const KakaoMap = () => {
             });
 
             // 경로 설정
+            async function waypointDirection(pointObj) {
+                const url = 'https://apis-navi.kakaomobility.com/v1/waypoints/directions';
+
+                // 출발지(origin), 목적지(destination)의 좌표를 객체로 생성합니다.
+                const origin = {
+                    x: pointObj.startPoint.lng,
+                    y: pointObj.startPoint.lat,
+                };
+
+                const destination = {
+                    x: pointObj.endPoint.lng,
+                    y: pointObj.endPoint.lat,
+                };
+
+                // 경유지 정보 (선택적). 경유지가 없으면 빈 배열로 처리.
+                const waypoints = pointObj.waypoint
+                    ? [
+                          {
+                              name: pointObj.waypoint.title || 'Waypoint',
+                              x: pointObj.waypoint.lng,
+                              y: pointObj.waypoint.lat,
+                          },
+                      ]
+                    : [];
+
+                console.log(waypoints);
+
+                // 요청 payload를 구성합니다.
+                const body = {
+                    origin,
+                    destination,
+                    waypoints, // 경유지가 없으면 빈 배열이 전달됩니다.
+                    priority: 'RECOMMEND', // 추천 경로
+                    alternatives: false, // 대체 경로 요청 여부
+                    road_details: false, // 도로 세부 정보 포함 여부
+                };
+
+                // 요청 헤더를 추가합니다.
+                const headers = {
+                    Authorization: `KakaoAK ${API_KEY}`,
+                    'Content-Type': 'application/json',
+                };
+
+                console.log('Request URL:', url);
+                console.log('Request Headers:', headers);
+                console.log('Request Body:', JSON.stringify(body));
+
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: headers,
+                        body: JSON.stringify(body), // JSON 형태로 요청 데이터를 변환
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! Status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+
+                    console.log('데이터:', data);
+                    const linePath = [];
+                    data.routes[0].sections[0].roads.forEach((router) => {
+                        router.vertexes.forEach((vertex, index) => {
+                            // x,y 좌표가 우르르 들어옵니다. 그래서 인덱스가 짝수일 때만 linePath에 넣어봅시다.
+                            // 저도 실수한 것인데 lat이 y이고 lng이 x입니다.
+                            if (index % 2 === 0) {
+                                linePath.push(
+                                    new kakao.maps.LatLng(router.vertexes[index + 1], router.vertexes[index])
+                                );
+                            }
+                        });
+                    });
+                    var polyline = new kakao.maps.Polyline({
+                        path: linePath,
+                        strokeWeight: 5,
+                        strokeColor: '#000000',
+                        strokeOpacity: 0.7,
+                        strokeStyle: 'solid',
+                    });
+                    polyline.setMap(map);
+
+                    return data;
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            }
             async function getCarDirection(pointObj) {
                 //const REST_API_KEY = process.env.VITE_KAKAO_REST_API_KEY;
 
@@ -105,7 +193,8 @@ const KakaoMap = () => {
                 }
             }
 
-            getCarDirection({ startPoint: locations[0], endPoint: locations[1] });
+            //getCarDirection({ startPoint: locations[0], endPoint: locations[1] });
+            waypointDirection({ startPoint: locations[0], endPoint: locations[1], waypoint: locations[2], API_KEY });
         }
     }, []);
 
