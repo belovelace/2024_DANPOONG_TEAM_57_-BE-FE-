@@ -79,7 +79,7 @@ CREATE TABLE travel_theme (
 );
 
 -- 지역 테이블
-CREATE TABLE arca (
+CREATE TABLE area (
     area_id INT PRIMARY KEY,
     area_name VARCHAR2(300) NOT NULL
 );

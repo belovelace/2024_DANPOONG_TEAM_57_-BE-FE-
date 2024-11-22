@@ -11,4 +11,6 @@ public interface PreferAreaMapper {
 
     @Select("SELECT area_id AS areaId, area_name AS areaName FROM area")
     List<PreferAreaVo> getAreaList();
+
+    void insertArea(PreferAreaVo area);
 }
