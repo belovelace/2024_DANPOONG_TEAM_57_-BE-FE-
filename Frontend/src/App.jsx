@@ -8,6 +8,7 @@ import CreateTrip from '../../Frontend/src/pages/CreateTrip';
 import Header from '../../Frontend/src/components/custom/Header';
 import LoginPage from './pages/LoginPage';
 import KakaoMap from './pages/KakaoMap';
+import HomePage from './pages/HomePage';
 
 function App() {
     const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<MainPage />} />
+                <Route path="/home" element={<HomePage />} />
                 <Route path="/create-trip" element={<CreateTrip />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/map" element={<KakaoMap />} />
