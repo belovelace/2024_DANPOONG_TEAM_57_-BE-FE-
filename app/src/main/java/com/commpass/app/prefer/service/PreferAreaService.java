@@ -16,5 +16,8 @@ public class PreferAreaService {
     public List<PreferAreaVo> getAreaList() { return dao.getAreaList();}
 
 
+    public int selectArea(PreferAreaVo vo) {return dao.selectArea(vo);}
+
+
 
 }//class

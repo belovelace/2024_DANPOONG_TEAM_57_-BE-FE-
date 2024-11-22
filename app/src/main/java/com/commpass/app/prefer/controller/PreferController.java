@@ -10,7 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class PreferController {
 
+    //지역조회
     @GetMapping("area")
     public String area() {return "prefer/preferArea";}
+
+    //지역 선택
+    @GetMapping("select")
+    public String selectArea() {return "prefer/selectArea";}
 
 }

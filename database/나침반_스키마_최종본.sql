@@ -10,6 +10,7 @@ DROP TABLE healing_trip CASCADE CONSTRAINTS;
 DROP TABLE vitality_travel CASCADE CONSTRAINTS;
 DROP TABLE category CASCADE CONSTRAINTS;
 DROP TABLE festivities CASCADE CONSTRAINTS;
+DROP TABLE user_selection CASCADE CONSTRAINTS;
 
 -- 시퀀스 삭제
 DROP SEQUENCE seq_theme_id;
@@ -21,6 +22,8 @@ DROP SEQUENCE seq_healing_trip_id;
 DROP SEQUENCE seq_vitality_travel_id;
 DROP SEQUENCE seq_category_id;
 DROP SEQUENCE seq_festivities_id;
+DROP SEQUENCE seq_user_selection_id;
+
 
 ---- 시퀀스 생성 ----
 
@@ -66,6 +69,11 @@ INCREMENT BY 1;
 
 -- 축제 시퀀스
 CREATE SEQUENCE seq_festivities_id
+START WITH 1
+INCREMENT BY 1;
+
+-- 사용자 선택 시퀀스
+CREATE SEQUENCE seq_user_selection_id
 START WITH 1
 INCREMENT BY 1;
 
@@ -196,4 +204,16 @@ CREATE TABLE vitality_travel (
     FOREIGN KEY (theme_id) REFERENCES travel_theme(theme_id),
     FOREIGN KEY (festivities_id) REFERENCES festivities(festivities_id),
     FOREIGN KEY (cdg_id) REFERENCES category(cdg_id)
+);
+
+-- 사용자 지역 및 특산물 선택 테이블 생성
+CREATE TABLE user_selection (
+    selection_id INT PRIMARY KEY,
+    user_id VARCHAR2(150) NOT NULL,
+    area_id INT NOT NULL,
+    specialties_id INT, 
+    selection_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (area_id) REFERENCES area(area_id),
+    FOREIGN KEY (specialties_id) REFERENCES specialties(specialties_id)
 );
