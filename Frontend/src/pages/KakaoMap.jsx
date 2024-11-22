@@ -1,69 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const KakaoMap = () => {
-    const [isLoaded, setIsLoaded] = useState(false);
+    const mapContainer = useRef(null); // 지도를 렌더링할 DOM 요소를 참조
 
     useEffect(() => {
-        let isMounted = true; // 컴포넌트가 마운트 상태인지 추적
+        // 카카오 지도 API가 로드되었는지 확인
+        if (window.kakao && window.kakao.maps) {
+            const kakao = window.kakao;
 
-        const loadKakaoMapScript = () => {
-            return new Promise((resolve, reject) => {
-                if (document.getElementById('kakao-map-script')) {
-                    if (window.kakao && window.kakao.maps) {
-                        resolve();
-                    } else {
-                        reject(new Error('Kakao Maps SDK가 올바르게 로드되지 않았습니다.'));
-                    }
-                    return;
-                }
+            // 지도 옵션 설정
+            const options = {
+                center: new kakao.maps.LatLng(37.5665, 126.978), // 서울의 위도, 경도
+                level: 3, // 확대 레벨
+            };
 
-                const script = document.createElement('script');
-                script.id = 'kakao-map-script';
-                script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${
-                    import.meta.env.VITE_KAKAOMAP_KEY
-                }&libraries=services,clusterer`;
-                script.async = true;
-                script.onload = () => resolve();
-                script.onerror = () => reject(new Error('Kakao Maps SDK 로드 실패'));
-                document.head.appendChild(script);
+            // 지도 생성
+            const map = new kakao.maps.Map(mapContainer.current, options);
+
+            // 마커 생성
+            const markerPosition = new kakao.maps.LatLng(37.5665, 126.978);
+            const marker = new kakao.maps.Marker({
+                position: markerPosition,
             });
-        };
 
-        loadKakaoMapScript()
-            .then(() => {
-                if (isMounted) setIsLoaded(true);
-            })
-            .catch((error) => console.error(error.message));
-
-        return () => {
-            isMounted = false; // 컴포넌트 언마운트 시 상태 업데이트 중지
-        };
+            // 지도에 마커 추가
+            marker.setMap(map);
+        }
     }, []);
 
-    useEffect(() => {
-        if (isLoaded) {
-            const container = document.getElementById('map');
-            const options = {
-                center: new window.kakao.maps.LatLng(33.450701, 126.570667),
-                level: 3,
-            };
-            const map = new window.kakao.maps.Map(container, options);
-
-            return () => {
-                // HMR 갱신 시 지도 리소스 해제
-                if (map) {
-                    map.destroy && map.destroy();
-                }
-            };
-        }
-    }, [isLoaded]);
-
-    return (
-        <div>
-            {!isLoaded && <p>Loading Kakao Map...</p>}
-            <div id="map" style={{ width: '100vw', height: '100vh' }}></div>
-        </div>
-    );
+    return <div ref={mapContainer} style={{ width: '100%', height: '400px', border: '1px solid #ccc' }}></div>;
 };
 
 export default KakaoMap;

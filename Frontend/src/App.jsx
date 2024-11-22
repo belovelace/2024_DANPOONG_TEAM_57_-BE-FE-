@@ -19,7 +19,7 @@ function App() {
                 {/* <Route path="/" element={<MainPage />} /> */}
                 <Route path="/create-trip" element={<CreateTrip />} />
                 <Route path="/login" element={<LoginPage />} />
-                <Route path="/" element={<KakaoMap />} />
+                <Route path="/map" element={<KakaoMap />} />
                 {/* <Route path="/new" element={<New />} /> */}
                 {/* <Route path="/diary/:id" element={<Diary />} /> */}
                 <Route path="*" element={<NotFound />} />
