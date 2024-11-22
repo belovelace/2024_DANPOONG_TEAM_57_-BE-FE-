@@ -12,7 +12,14 @@ public class MemberDao {
 
     private final MemberMapper mapper;
 
-    public int join(MemberVo vo) {return mapper.join(vo);}
+    public int join(MemberVo vo) {
+        return mapper.join(vo);
+    }
 
+    public boolean isDuplicateId(String id) {
+        return mapper.isDuplicateId(id) > 0; // COUNT 결과가 0보다 크면 중복 ID 존재
+    }
+
+    public MemberVo login(MemberVo vo) {return mapper.login(vo);}
 
 }//class

@@ -26,11 +26,11 @@
                 // AJAX 요청
                 $.ajax({
                     type: 'POST',
-                    url: '/join',
+                    url: '/member/join',
                     contentType: 'application/json',
                     data: JSON.stringify(formData),
                     success: function (response) {
-                        alert(response.message || '회원가입이 완료되었습니다!');
+                        alert(response.message || '회원가입이 완Preferred travel destination료되었습니다!');
                         window.location.href = '/signup-success'; // 성공 시 리디렉션
                     },
                     error: function (xhr, status, error) {
@@ -44,8 +44,9 @@
 <body>
 <h1>회원가입</h1>
 <form id="signupForm">
+
     <label for="id">ID:</label><br>
-    <input type="number" id="id" name="id" required><br><br>
+    <input type="text" id="id" name="id" required><br><br>
 
     <label for="pwd">비밀번호:</label><br>
     <input type="password" id="pwd" name="pwd" required><br><br>
@@ -70,12 +71,6 @@
 
     <label for="nick">닉네임:</label><br>
     <input type="text" id="nick" name="nick"><br><br>
-
-    <label for="areaId">지역 ID:</label><br>
-    <input type="number" id="areaId" name="areaId"><br><br>
-
-    <label for="themeId">테마 ID:</label><br>
-    <input type="number" id="themeId" name="themeId"><br><br>
 
     <button type="submit">회원가입</button>
 </form>
