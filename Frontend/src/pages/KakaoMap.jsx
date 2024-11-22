@@ -1,9 +1,11 @@
+import { LocationContext } from '@/context/LocationContext';
 import waypointDirection from '@/util/waypointDirection';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useContext } from 'react';
 import.meta.env.VITE_KAKAO_REST_API_KEY;
 
 const KakaoMap = () => {
     const mapContainer = useRef(null); // 지도를 렌더링할 DOM 요소를 참조
+    const { locations } = useContext(LocationContext); // Context에서 locations 가져오기
 
     useEffect(() => {
         if (window.kakao && window.kakao.maps) {
@@ -23,11 +25,11 @@ const KakaoMap = () => {
             const map = new kakao.maps.Map(mapContainer.current, options);
 
             // 마커 위치 데이터
-            const locations = [
-                { title: '장소 1', lat: 37.5665, lng: 126.978 }, // 서울 (시청 근처)
-                { title: '장소 2', lat: 37.58, lng: 126.983 }, // 북촌 한옥마을 근처
-                { title: '장소 3', lat: 37.55, lng: 126.99 }, // 이태원 근처
-            ];
+            // const locations = [
+            //     { title: '장소 1', lat: 37.5665, lng: 126.978 }, // 서울 (시청 근처)
+            //     { title: '장소 2', lat: 37.58, lng: 126.983 }, // 북촌 한옥마을 근처
+            //     { title: '장소 3', lat: 37.55, lng: 126.99 }, // 이태원 근처
+            // ];
 
             // 마커 생성
             locations.forEach((location) => {
@@ -101,25 +103,34 @@ const KakaoMap = () => {
                     const data = await response.json();
 
                     console.log('데이터:', data);
+
                     const linePath = [];
-                    data.routes[0].sections[0].roads.forEach((router) => {
-                        router.vertexes.forEach((vertex, index) => {
-                            // x,y 좌표가 우르르 들어옵니다. 그래서 인덱스가 짝수일 때만 linePath에 넣어봅시다.
-                            // 저도 실수한 것인데 lat이 y이고 lng이 x입니다.
-                            if (index % 2 === 0) {
-                                linePath.push(
-                                    new kakao.maps.LatLng(router.vertexes[index + 1], router.vertexes[index])
-                                );
-                            }
+
+                    // 모든 sections을 순회
+                    data.routes[0].sections.forEach((section) => {
+                        // 각 section의 roads를 순회
+                        section.roads.forEach((road) => {
+                            // 각 road의 vertexes를 처리 (짝수 인덱스는 lng, 홀수 인덱스는 lat)
+                            road.vertexes.forEach((vertex, index) => {
+                                if (index % 2 === 0) {
+                                    linePath.push(
+                                        new kakao.maps.LatLng(road.vertexes[index + 1], road.vertexes[index])
+                                    );
+                                }
+                            });
                         });
                     });
-                    var polyline = new kakao.maps.Polyline({
-                        path: linePath,
-                        strokeWeight: 5,
-                        strokeColor: '#000000',
-                        strokeOpacity: 0.7,
-                        strokeStyle: 'solid',
+
+                    // 폴리라인 생성
+                    const polyline = new kakao.maps.Polyline({
+                        path: linePath, // 전체 경로
+                        strokeWeight: 7, // 선의 두께
+                        strokeColor: '#FFB6C1', // 선의 색깔
+                        strokeOpacity: 0.7, // 선의 투명도
+                        strokeStyle: 'solid', // 선의 스타일
                     });
+
+                    // 폴리라인을 지도에 추가
                     polyline.setMap(map);
 
                     return data;
@@ -194,11 +205,11 @@ const KakaoMap = () => {
             }
 
             //getCarDirection({ startPoint: locations[0], endPoint: locations[1] });
-            waypointDirection({ startPoint: locations[0], endPoint: locations[1], waypoint: locations[2], API_KEY });
+            waypointDirection({ startPoint: locations[0], endPoint: locations[2], waypoint: locations[1], API_KEY });
         }
-    }, []);
+    }, [locations]);
 
-    return <div ref={mapContainer} style={{ width: '100%', height: '400px', border: '1px solid #ccc' }}></div>;
+    return <div ref={mapContainer} style={{ width: '100%', height: '100vh', border: '1px solid #ccc' }}></div>;
 };
 
 export default KakaoMap;
