@@ -8,6 +8,7 @@ const KakaoMap = () => {
     const { locations } = useContext(LocationContext); // Context에서 locations 가져오기
 
     useEffect(() => {
+        let idx = 1;
         if (window.kakao && window.kakao.maps) {
             const kakao = window.kakao;
 
@@ -34,11 +35,43 @@ const KakaoMap = () => {
             // 마커 생성
             locations.forEach((location) => {
                 const markerPosition = new kakao.maps.LatLng(location.lat, location.lng);
-                const marker = new kakao.maps.Marker({
+                // 커스텀 마커 HTML
+                const markerContent = `
+                <div style="
+                    width: 30px; 
+                    height: 30px; 
+                    background-color: #ff6f61; 
+                    border-radius: 50%; 
+                    display: flex; 
+                    align-items: center; 
+                    justify-content: center; 
+                    color: white; 
+                    font-weight: bold;
+                    border: 2px solid white;
+                    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+                ">
+                ${idx++}
+                <div style="
+                    position: absolute; 
+                    bottom: -8px; /* 원 아래에 꼬리가 붙도록 조정 */
+                    left: 50%; 
+                    transform: translateX(-50%); /* 꼬리를 가운데 정렬 */
+                    width: 0; 
+                    height: 0; 
+                    border-left: 6px solid transparent; 
+                    border-right: 6px solid transparent; 
+                    border-top: 8px solid #ff6f61; /* 마커 색상과 동일 */
+                "></div>
+            </div>
+        `;
+
+                // 커스텀 오버레이 추가
+                const customOverlay = new kakao.maps.CustomOverlay({
                     position: markerPosition,
-                    title: location.title, // 마커의 타이틀
+                    content: markerContent,
+                    yAnchor: 1,
                 });
-                marker.setMap(map);
+                customOverlay.setMap(map);
             });
 
             // 경로 설정
