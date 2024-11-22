@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'PretendardVariable';
+    src: url('./../assets/fonts/PretendardVariable.ttf');
+    /* font-family: 'PretendardVariable';
+    src: url('/PretendardVariable.ttf'); */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PretendardVariable';
+}
+
+:root {
+    --primaryColor: hsl(14, 90%, 53%);
+    --primaryColorLight: hsl(14, 96%, 91%);
+    --bgColor: hsl(0, 0%, 100%);
+    --formColor: hsl(28, 42%, 87%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+.MainPage {
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column; /* 콘텐츠를 수직 정렬 */
+    justify-content: center; /* 콘텐츠를 수직 가운데 정렬 */
+    align-items: center; /* 콘텐츠를 수평 가운데 정렬 */
+}
+
+.MainPage .videoBg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.MainPage .video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.MainPage .sectionText {
+    position: absolute;
+    height: 100%;
+    top: 30%;
+    bottom: 50%;
+    color: var(--whiteColor);
+    padding: 0 1.3rem;
+}
+
+.MainPage .sectionText h1 {
+    font-size: var(--biggestFontSize);
+    font-weight: 900;
+}
+
+.MainPage .sectionText p {
+    padding: 1rem 0;
+    font-size: var(--normalFontSize);
+    font-weight: 500;
+}
+
+.MainPage .sectionText .btn {
+    gap: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: var(--h3FontSize);
+}
+
+//추가
+.popularPlaces {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.popularPlaces .images {
+    margin-top: 300px;
+    display: flex;
+    justify-content: center; /* 가로로 중앙 정렬 */
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    max-width: 100%; /* 부모 컨테이너 너비 제한 */
+}
+
+.popularPlaces .images img {
+    width: 200px; /* 일정한 크기 설정 */
+    height: 150px; /* 일정한 크기 설정 */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 100;
+}
+
+.popularPlaces .images img:hover {
+    transform: scale(1.1); /* 확대 효과 */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 호버 시 그림자 강조 */
+}

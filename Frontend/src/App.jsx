@@ -16,7 +16,7 @@ function App() {
         <>
             <Header />
             <Routes>
-                {/* <Route path="/" element={<MainPage />} /> */}
+                <Route path="/" element={<MainPage />} />
                 <Route path="/create-trip" element={<CreateTrip />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/map" element={<KakaoMap />} />
