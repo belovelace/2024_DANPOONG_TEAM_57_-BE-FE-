@@ -11,7 +11,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PreferAreaService {
 
-    private PreferAreaDao dao;
+    private final PreferAreaDao dao;
 
     public List<PreferAreaVo> getAreaList() { return dao.getAreaList();}
 

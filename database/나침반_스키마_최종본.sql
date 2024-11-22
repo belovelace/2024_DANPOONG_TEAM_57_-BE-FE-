@@ -137,7 +137,7 @@ CREATE TABLE festivities (
 
 -- 유저 테이블
 CREATE TABLE users (
-    id INT PRIMARY KEY,
+    id VARCHAR2(150) PRIMARY KEY,
     pwd VARCHAR2(300) NOT NULL,
     name VARCHAR2(150) NOT NULL,
     email VARCHAR2(300) NOT NULL,
