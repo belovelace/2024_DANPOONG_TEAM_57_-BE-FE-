@@ -5,6 +5,18 @@
     text-align: center;
 }
 
+:root {
+    scroll-behavior: smooth;
+    --primary: #4154f1;
+    --second: #717ff5;
+    --bgColor: #f6f9ff;
+}
+
+body {
+    color: #444444;
+    background: var(--bgColor);
+}
+
 .logo {
     height: 6em;
     padding: 1.5em;
