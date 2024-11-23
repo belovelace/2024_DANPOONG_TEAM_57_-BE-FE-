@@ -1,6 +1,7 @@
 package com.commpass.app.theme.dao;
 
 import com.commpass.app.theme.mapper.ThemeMapper;
+import com.commpass.app.theme.vo.HealingThemeVo;
 import com.commpass.app.theme.vo.ThemeVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
@@ -16,7 +17,7 @@ public class ThemeDao {
     public List<ThemeVo> getThemeList() {return mapper.getThemeList();}
 
 
-    public List<ThemeVo> getHealingList() {return mapper.getHealingList();}
 
+    public List<HealingThemeVo> getHealingList() {return mapper.getHealingList();}
 
 }//class
