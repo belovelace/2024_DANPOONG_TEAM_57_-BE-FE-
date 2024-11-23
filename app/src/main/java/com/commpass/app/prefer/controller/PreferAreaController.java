@@ -23,6 +23,9 @@ public class PreferAreaController {
         return voList;
     }
 
+    //
+
+
     //지역 선택(삽입)
     @PostMapping("select/area")
     public ResponseEntity<String> selectArea(@RequestBody PreferAreaVo vo) {
