@@ -1,6 +1,6 @@
 -- 테이블과 시퀀스 삭제
 DROP TABLE user_selection CASCADE CONSTRAINTS;
-DROP TABLE "user" CASCADE CONSTRAINTS;
+DROP TABLE users CASCADE CONSTRAINTS;
 DROP TABLE specialties CASCADE CONSTRAINTS;
 DROP TABLE area CASCADE CONSTRAINTS;
 DROP TABLE restaurant CASCADE CONSTRAINTS;
@@ -28,8 +28,8 @@ CREATE TABLE area (
     area_name VARCHAR2(300)
 );
 
-CREATE TABLE "user" (
-    user_id INT PRIMARY KEY,
+CREATE TABLE users (
+    user_id VARCHAR2(300) PRIMARY KEY,
     pwd VARCHAR2(300),
     name VARCHAR2(150),
     email VARCHAR2(300),
@@ -65,7 +65,7 @@ CREATE TABLE user_selection (
     prefer_user_id INT,
     prefer_area_id INT,
     prefer_specialties_id INT,
-    FOREIGN KEY (prefer_user_id) REFERENCES "user"(user_id),
+    FOREIGN KEY (prefer_user_id) REFERENCES users(user_id),
     FOREIGN KEY (prefer_area_id) REFERENCES area(area_id),
     FOREIGN KEY (prefer_specialties_id) REFERENCES specialties(specialties_id)
 );
