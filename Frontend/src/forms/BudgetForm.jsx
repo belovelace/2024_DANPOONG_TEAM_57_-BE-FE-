@@ -94,7 +94,7 @@ const BudgetForm = () => {
             </SliderContainer>
 
             {/* 버튼 */}
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', padding: '0 20px' }}>
                 <button
                     onClick={() => dispatch(setFormStage(1))}
                     style={{ marginTop: '0', backgroundColor: '#f2789f' }}
