@@ -9,10 +9,25 @@
     font-family: PretendardVariable;
 }
 
-h2 {
+.info {
     font-size: 18px;
     font-weight: 700;
+    margin-left: 10px;
+}
+
+.arrow-btn {
+    cursor: pointer;
+    transition: transform 0.2s ease; /* 부드러운 효과 */
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1); /* 호버 시 크기 확대 */
+    color: #0056b3; /* 호버 시 색상 변경 */
+}
+.info-div {
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
 }
 
 li {
@@ -45,4 +60,10 @@ h3 {
     margin: 0 0 8px 0;
     font-weight: 700;
     color: #ff99cc;
+}
+
+h4 {
+    font-size: 15px;
+    margin: 0 0 8px 0;
+    color: gray;
 }

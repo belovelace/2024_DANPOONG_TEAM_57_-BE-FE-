@@ -11,7 +11,7 @@ import couple from './../assets/couple.jpg';
 
 const MainPage = () => {
     return (
-        <div className="MainPage">
+        <main className="MainPage">
             <div className="videoBg">
                 <video src={Video} autoPlay loop muted></video>
             </div>
@@ -47,7 +47,7 @@ const MainPage = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </main>
     );
 };
 

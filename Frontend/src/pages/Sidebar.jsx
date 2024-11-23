@@ -1,9 +1,13 @@
-import React, { useContext, memo } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
-import { useContext } from 'react';
-import { LocationContext } from '@/context/LocationContext';
+import { FaArrowAltCircleLeft } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
-export default Sidebar = memo(({ locations, setLocations }) => {
+const Sidebar = ({ locations, setLocations }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/home'); // "/home" 경로로 이동
+    };
     const handleDragEnd = (result) => {
         const { source, destination } = result;
 
@@ -27,7 +31,12 @@ export default Sidebar = memo(({ locations, setLocations }) => {
 
     return (
         <div style={sidebarStyle}>
-            <h2>장소 정보</h2>
+            <div className="info-div">
+                <FaArrowAltCircleLeft className="arrow-btn" onClick={handleClick} />
+                <span className="info">장소 정보</span>
+            </div>
+
+            <h4>드래그해서 방문 순서를 바꿀 수 있어요!</h4>
             <DragDropContext onDragEnd={handleDragEnd}>
                 <Droppable droppableId="locations">
                     {(droppableProvider) => (
@@ -67,4 +76,6 @@ export default Sidebar = memo(({ locations, setLocations }) => {
             </DragDropContext>
         </div>
     );
-});
+};
+
+export default Sidebar;

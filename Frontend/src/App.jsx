@@ -15,8 +15,6 @@ import MapPage from './pages/MapPage';
 import { LocationProvider } from './context/LocationContext';
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <>
             {/* <div style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1000 }}>
