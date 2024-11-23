@@ -120,7 +120,6 @@ CREATE TABLE festivities (
 CREATE TABLE healing_trip (
     theme_id INT PRIMARY KEY,
     theme_area INT,
-    festivities_id INT,
     theme_address VARCHAR2(765),
     theme_name VARCHAR2(150),
     open_time DATE,
@@ -138,7 +137,6 @@ CREATE TABLE healing_trip (
 CREATE TABLE vitality_travel (
     theme_id INT PRIMARY KEY,
     theme_area INT,
-    festivities_id INT,
     theme_address VARCHAR2(765),
     theme_name VARCHAR2(150),
     open_time DATE,
