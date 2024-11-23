@@ -20,7 +20,7 @@ public class PlanService {
 
 
     @Transactional
-    public List<PlanInsertVo> PlanList() {return dao.PlanList();}
+    public List<PlanInsertVo> PlanList(String userId) {return dao.PlanList(userId);}
 
 
 }//class
