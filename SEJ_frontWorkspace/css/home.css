@@ -1,0 +1,118 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 전체 페이지 배경과 중앙 정렬 설정 */
+body {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header 스타일 */
+.header {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  padding: 15px 0;
+}
+
+.nav-list {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-list li {
+  margin-bottom: 10px;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #007bff;
+}
+
+/* Header hover 시 bar 노출 */
+.header:hover .nav-bar {
+  display: block;
+}
+
+/* 컨텐츠 영역 스타일 */
+div.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+}
+
+/* 환영 메시지 스타일 */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 링크 스타일 */
+a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
+
+/* 로그아웃 버튼만을 위한 추가 스타일 */
+a.logout {
+  background-color: #dc3545;
+}
+
+a.logout:hover {
+  background-color: #b02a37;
+}
+
+/* Footer 스타일 */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.footer-container p {
+  font-size: 14px;
+} 

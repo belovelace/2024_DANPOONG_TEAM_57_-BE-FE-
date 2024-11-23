@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="/css/member/join.css">
 <head>
     <title>회원가입</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -42,7 +43,6 @@
     </script>
 </head>
 <body>
-<h1>회원가입</h1>
 <form id="signupForm">
 
     <label for="id">ID:</label><br>
