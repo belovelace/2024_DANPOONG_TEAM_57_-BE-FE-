@@ -4,6 +4,7 @@ import com.commpass.app.prefer.vo.PreferAreaVo;
 import com.commpass.app.theme.service.ThemeService;
 import com.commpass.app.theme.vo.HealingThemeVo;
 import com.commpass.app.theme.vo.ThemeVo;
+import com.commpass.app.theme.vo.VitalityThemeVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +35,11 @@ public class ThemeAPIController {
     }
 
     //활력테마 조회
+    @GetMapping("vitalityList")
+    public List<VitalityThemeVo> getVitalityList(){
+        List<VitalityThemeVo> voList = service.VitalityList();
+        return voList;
+    }
 
     //미식테마 조회
 }
