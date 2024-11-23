@@ -218,25 +218,16 @@ INSERT INTO festivities (festivities_id, festivities_name, festivities_address, 
 VALUES (festivities_seq.NEXTVAL, '보은대추 축제', '충북 보은읍 뱃들공원 및 속리산 일원', 9, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-20 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
 
 -- user
-INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id)
-VALUES (1, 'asdf1234', '안수현', 'sunnyan@gmail.com', 23, '경기도 성남시 분당구 판교로 112', '1', 'sunnyan', 8, 1);
+INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id) 
+VALUES ('user01', 'password123', '홍길동', 'hong@example.com', 28, '서울특별시 강남구 역삼동 123-45', 'M', '길동이', 1, 1);
 
-INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id)
-VALUES (2, 'qwer2345', '이민재', 'mjlee77@naver.com', 30, '부산광역시 해운대구 달맞이길 45', '2', 'mjlee77', 7, 2);
+INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id) 
+VALUES ('user02', 'securePwd456', '김영희', 'younghee@example.com', 32, '경기도 성남시 분당구 678-90', 'F', '영희짱', 2, 2);
 
-INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id)
-VALUES (3, 'zxcv3456', '박하은', 'grace_park85@daum.net', 19, '대구광역시 수성구 범어로 77', '1', 'grace85', 3, 3);
-
+INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id) 
+VALUES ('user03', 'mySecret789', '이철수', 'chulsoo@example.com', 25, '부산광역시 해운대구 센텀동 55-11', 'M', '철수네', 3, 3);
 
 -- user_selection
-insert into user_selection (selection_id, selection_date, prefer_user_id, prefer_area_id, prefer_specialties_id, prefer_theme_id)
-values (1, TO_TIMESTAMP('2024-04-26 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), 1, 8, 37, 1);
-
-insert into user_selection (selection_id, selection_date, prefer_user_id, prefer_area_id, prefer_specialties_id, prefer_theme_id)
-values (2, TO_TIMESTAMP('2024-07-01 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 2, 7, 33, 2);
-
-insert into user_selection (selection_id, selection_date, prefer_user_id, prefer_area_id, prefer_specialties_id, prefer_theme_id)
-values (3, TO_TIMESTAMP('2024-10-15 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 3, 3, 14, 3);
 
 
 -- restarurant
@@ -739,3 +730,6 @@ VALUES (vitality_travel_seq.NEXTVAL, 9, '충북 제천시 청풍면 문화재길 166', '청풍
 
 INSERT INTO vitality_travel (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key)
 VALUES (vitality_travel_seq.NEXTVAL, 9, '충북 충주시 살미면 월악로 1087', '포세이돈수상레저', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 30000, '충주호에서 다양한 수상 스포츠를 즐길수 있는 명소', 4, 128.1079, 37.0171, 3);
+
+
+commit
