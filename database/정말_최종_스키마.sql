@@ -10,6 +10,7 @@ DROP TABLE travel_theme CASCADE CONSTRAINTS;
 DROP TABLE healing_trip CASCADE CONSTRAINTS;
 DROP TABLE vitality_travel CASCADE CONSTRAINTS;
 DROP TABLE category CASCADE CONSTRAINTS;
+DROP TABLE travel_plan CASCADE CONSTRAINTS;
 
 DROP SEQUENCE user_selection_seq;
 DROP SEQUENCE specialties_seq;
@@ -21,6 +22,8 @@ DROP SEQUENCE travel_theme_seq;
 DROP SEQUENCE healing_trip_seq;
 DROP SEQUENCE vitality_travel_seq;
 DROP SEQUENCE category_seq;
+DROP SEQUENCE travel_plan_seq;
+
 
 -- 테이블 생성
 CREATE TABLE area (
@@ -174,3 +177,4 @@ CREATE SEQUENCE travel_theme_seq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE healing_trip_seq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE vitality_travel_seq START WITH 1 INCREMENT BY 1;
 CREATE SEQUENCE category_seq START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE travel_plan_seq START WITH 1 INCREMENT BY 1;
