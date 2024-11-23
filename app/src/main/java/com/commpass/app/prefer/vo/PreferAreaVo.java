@@ -7,8 +7,7 @@ public class PreferAreaVo {
 
     private int areaId;          // 지역 ID
     private String areaName;     // 지역 이름
-
-    private int userId;       // 사용자 ID
+    
 
 }
 
