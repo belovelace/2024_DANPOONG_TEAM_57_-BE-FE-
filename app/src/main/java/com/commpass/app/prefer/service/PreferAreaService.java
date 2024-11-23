@@ -1,6 +1,7 @@
 package com.commpass.app.prefer.service;
 
 import com.commpass.app.prefer.dao.PreferAreaDao;
+import com.commpass.app.prefer.vo.AreaDetailVo;
 import com.commpass.app.prefer.vo.PreferAreaVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,9 @@ public class PreferAreaService {
 
 
     public int selectArea(PreferAreaVo vo) {return dao.selectArea(vo);}
+
+
+    public List<AreaDetailVo> getAreaDetailList() {return dao.getAreaDetailList();}
 
 
 
