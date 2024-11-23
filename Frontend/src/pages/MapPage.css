@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'PretendardVariable';
+    src: url('./../assets/fonts/PretendardVariable.ttf');
+    /* font-family: 'PretendardVariable';
+    src: url('/PretendardVariable.ttf'); */
+}
+
+* {
+    font-family: PretendardVariable;
+}
+
+.info {
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.arrow-btn {
+    cursor: pointer;
+    transition: transform 0.2s ease; /* 부드러운 효과 */
+}
+
+.arrow-btn:hover {
+    transform: scale(1.1); /* 호버 시 크기 확대 */
+    color: #0056b3; /* 호버 시 색상 변경 */
+}
+.info-div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+li {
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px; /* 모서리를 둥글게 */
+    background-color: #ffffff; /* 흰색 배경 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 박스 그림자 */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* 호버 시 애니메이션 */
+    cursor: pointer;
+}
+
+/* 첫 번째 li 스타일 */
+li:first-child {
+    border: 2px solid #ffb6c1;
+    border-radius: 8px; /* 모서리를 둥글게 */
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+/* 마지막 li 스타일 */
+/* li:last-child {
+    border: 2px solid #4caf50; 
+    border-radius: 8px; 
+    padding: 8px;
+    margin-bottom: 8px;
+} */
+
+h3 {
+    margin: 0 0 8px 0;
+    font-weight: 700;
+    color: #ff99cc;
+}
+
+h4 {
+    font-size: 15px;
+    margin: 0 0 8px 0;
+    color: gray;
+}
