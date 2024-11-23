@@ -111,9 +111,8 @@ CREATE TABLE festivities (
     festivities_name VARCHAR2(300),
     festivities_address VARCHAR2(765),
     festivities_area INT,
-    festivities_date DATE,
-    festivities_open_time TIMESTAMP,
-    festivities_close_time TIMESTAMP,
+    festivities_start_date DATE,
+    festivities_end_date DATE,
     FOREIGN KEY (festivities_area) REFERENCES area(area_id)
 );
 
