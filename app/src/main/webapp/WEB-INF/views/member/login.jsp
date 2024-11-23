@@ -11,8 +11,8 @@
 <p style="color:red;">아이디 또는 비밀번호가 잘못되었습니다.</p>
 <% } %>
 <form action="/member/login" method="post">
-    <label for="id">아이디:</label>
-    <input type="text" id="id" name="id" required><br><br>
+    <label for="userId">아이디:</label>
+    <input type="text" id="userId" name="userId" required><br><br>
     <label for="pwd">비밀번호:</label>
     <input type="password" id="pwd" name="pwd" required><br><br>
     <input type="submit" value="로그인">

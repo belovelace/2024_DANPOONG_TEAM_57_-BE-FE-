@@ -11,7 +11,7 @@ import lombok.Data;
 public class MemberVo {
 
     @NotBlank(message = "ID는 필수 입력값입니다.")
-    private String id;
+    private String userId; // 수정된 필드명
 
     @NotBlank(message = "비밀번호는 필수 입력값입니다.")
     private String pwd;
@@ -30,4 +30,5 @@ public class MemberVo {
     private char gender;
 
     private String nick;
+
 }
