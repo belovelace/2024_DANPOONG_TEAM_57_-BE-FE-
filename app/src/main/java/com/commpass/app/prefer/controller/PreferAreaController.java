@@ -1,6 +1,7 @@
 package com.commpass.app.prefer.controller;
 
 import com.commpass.app.prefer.service.PreferAreaService;
+import com.commpass.app.prefer.vo.AreaDetailVo;
 import com.commpass.app.prefer.vo.PreferAreaVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,12 @@ public class PreferAreaController {
         return voList;
     }
 
-    //
+    //지역 별로 조회
+    @GetMapping
+    public List<AreaDetailVo> getAreaDetailList(){
+        List<AreaDetailVo> voList = service.getAreaDetailList();
+        return voList;
+    }
 
 
     //지역 선택(삽입)

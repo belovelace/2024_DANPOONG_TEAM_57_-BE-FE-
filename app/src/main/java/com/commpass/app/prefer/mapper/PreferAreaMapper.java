@@ -1,5 +1,6 @@
 package com.commpass.app.prefer.mapper;
 
+import com.commpass.app.prefer.vo.AreaDetailVo;
 import com.commpass.app.prefer.vo.PreferAreaVo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -19,4 +20,5 @@ public interface PreferAreaMapper {
     int selectArea(PreferAreaVo vo);
 
 
+    List<AreaDetailVo> getAreaDetailList();
 }
