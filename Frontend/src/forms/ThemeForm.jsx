@@ -60,24 +60,36 @@ const NavigationButton = styled.button`
     }
 `;
 
-const FoodForm = () => {
+const TypeForm = () => {
     const dispatch = useDispatch();
     const [foods, setFoods] = useState([]);
 
+    useEffect(() => {
+        // 서버에서 음식 리스트 가져오기
+        axios
+            .get('https://example.com/api/foods') // 여기에 실제 API URL 입력
+            .then((response) => {
+                setFoods(response.data); // 서버에서 받은 데이터로 상태 업데이트
+            })
+            .catch((error) => {
+                console.error('음식 데이터를 가져오는 중 오류 발생:', error);
+            });
+    }, []);
+
     const handleNext = () => {
-        dispatch(setFormStage(4)); // 다음 단계로 이동
+        dispatch(setFormStage(5)); // 다음 단계로 이동
     };
 
     const handlePrevious = () => {
-        dispatch(setFormStage(2)); // 이전 단계로 이동
+        dispatch(setFormStage(4)); // 이전 단계로 이동
     };
 
     return (
-        <div>
-            <h2>음식을 선택하세요</h2>
+        <PageContainer>
+            <h2>유형을 선택하세요</h2>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <button
-                    onClick={() => dispatch(setFormStage(2))}
+                    onClick={() => dispatch(setFormStage(3))}
                     style={{ marginTop: '0', backgroundColor: '#f2789f' }}
                 >
                     이전
@@ -86,8 +98,8 @@ const FoodForm = () => {
                     다음
                 </button>
             </div>
-        </div>
+        </PageContainer>
     );
 };
 
-export default FoodForm;
+export default TypeForm;

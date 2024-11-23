@@ -1,16 +1,15 @@
 import React from 'react';
-import RenderHeader from './../../components/RenderHeader';
-import RenderNavTitle from './../../components/RenderNavTitle';
-import RenderStepNavigation from './../../components/RenderStepNavigation';
+import RenderHeader from '../RenderHeader';
+import RenderNavTitle from '../RenderNavTitle';
+import RenderStepNavigation from '../RenderStepNavigation';
 import LazyLoad from 'react-lazyload';
-import BudgetForm from './../../forms/BudgetForm';
 import ProgressSteps from '../ProgressSteps';
-import DestinationForm from '@/forms/DestinationForm';
+import TypeForm from '@/forms/ThemeForm';
 
-const Page2Container = ({ pageStage }) => {
+const Page5Container = ({ pageStage }) => {
     return (
         <React.Fragment>
-            <RenderHeader headerTitle={'선호 여행지'} />
+            <RenderHeader headerTitle={'여행 테마'} />
 
             <main>
                 <ProgressSteps />
@@ -19,7 +18,7 @@ const Page2Container = ({ pageStage }) => {
                     <div className="page-wrapper">
                         <div className="form-container">
                             <LazyLoad once>
-                                <DestinationForm
+                                <TypeForm
                                     submitButtonText={'다음'} // submit next button display text
                                     previousButton={'이전'} // show/hide previous button
                                 />
@@ -31,4 +30,4 @@ const Page2Container = ({ pageStage }) => {
         </React.Fragment>
     );
 };
-export default Page2Container;
+export default Page5Container;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
-import { setFormStage } from './../components/store/rootSlice';
+import { setFormStage } from '../components/store/rootSlice';
 import { Swiper, SwiperSlide } from 'swiper/react'; // Swiper와 SwiperSlide 가져오기
 import 'swiper/css'; // Swiper 기본 스타일
 import 'swiper/css/pagination'; // Pagination 스타일
@@ -60,9 +60,21 @@ const NavigationButton = styled.button`
     }
 `;
 
-const FoodForm = () => {
+const ThemeForm = () => {
     const dispatch = useDispatch();
     const [foods, setFoods] = useState([]);
+
+    useEffect(() => {
+        // 서버에서 음식 리스트 가져오기
+        axios
+            .get('https://example.com/api/foods') // 여기에 실제 API URL 입력
+            .then((response) => {
+                setFoods(response.data); // 서버에서 받은 데이터로 상태 업데이트
+            })
+            .catch((error) => {
+                console.error('음식 데이터를 가져오는 중 오류 발생:', error);
+            });
+    }, []);
 
     const handleNext = () => {
         dispatch(setFormStage(4)); // 다음 단계로 이동
@@ -73,11 +85,25 @@ const FoodForm = () => {
     };
 
     return (
-        <div>
+        <PageContainer>
             <h2>음식을 선택하세요</h2>
+            <Swiper
+                spaceBetween={20}
+                slidesPerView={1}
+                pagination={{ clickable: true }} // Pagination 활성화
+            >
+                {foods.map((food) => (
+                    <SwiperSlide key={food.id}>
+                        <Card>
+                            <FoodImage src={food.image} alt={food.name} />
+                            <FoodName>{food.name}</FoodName>
+                        </Card>
+                    </SwiperSlide>
+                ))}
+            </Swiper>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                 <button
-                    onClick={() => dispatch(setFormStage(2))}
+                    onClick={() => dispatch(setFormStage(3))}
                     style={{ marginTop: '0', backgroundColor: '#f2789f' }}
                 >
                     이전
@@ -86,8 +112,8 @@ const FoodForm = () => {
                     다음
                 </button>
             </div>
-        </div>
+        </PageContainer>
     );
 };
 
-export default FoodForm;
+export default ThemeForm;
