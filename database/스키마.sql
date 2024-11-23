@@ -129,8 +129,10 @@ CREATE TABLE healing_trip (
     ctg_id INT,
     lng FLOAT,
     lat FLOAT,
+    theme_key INT,
     FOREIGN KEY (theme_area) REFERENCES area(area_id),
-    FOREIGN KEY (ctg_id) REFERENCES category(ctg_id)
+    FOREIGN KEY (ctg_id) REFERENCES category(ctg_id),
+    FOREIGN KEY (theme_key) REFERENCES travel_theme(theme_id)
 );
 
 CREATE TABLE vitality_travel (
@@ -145,8 +147,10 @@ CREATE TABLE vitality_travel (
     ctg_id INT,
     lng FLOAT,
     lat FLOAT,
+    theme_key INT,
     FOREIGN KEY (theme_area) REFERENCES area(area_id),
-    FOREIGN KEY (ctg_id) REFERENCES category(ctg_id)
+    FOREIGN KEY (ctg_id) REFERENCES category(ctg_id),
+    FOREIGN KEY (theme_key) REFERENCES travel_theme(theme_id)
 );
 
 CREATE TABLE travel_plan (
