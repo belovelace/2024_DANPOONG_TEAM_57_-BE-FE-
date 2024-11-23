@@ -6,6 +6,7 @@ import LazyLoad from 'react-lazyload'; // use lazyload for components and image
 import Page1Container from './../view/Page1Container';
 import Page2Container from './../view/Page2Container';
 import './FormMainControl.css';
+import Page3Container from './Page3Container';
 
 const FormMainControl = () => {
     // 1. FormStage에 저장된 값 갖고 오기 : 페이지 번호
@@ -24,6 +25,11 @@ const FormMainControl = () => {
             {pageStage === 2 && (
                 <LazyLoad once>
                     <Page2Container />
+                </LazyLoad>
+            )}
+            {pageStage === 3 && (
+                <LazyLoad once>
+                    <Page3Container />
                 </LazyLoad>
             )}
         </div>

@@ -2,19 +2,20 @@ import { createSlice } from '@reduxjs/toolkit';
 
 // Slice
 const rootSlice = createSlice({
+    // 슬라이스 이름
     name: 'root',
 
     // 초기 상태 정의
     initialState: {
         FormStage: 1, // 현재 단계 (1~5)
-        Budget: '', // 예산
+        Budget: null, // 예산
         PreferredDestinations: [], // 선호 여행지 (배열 형태로 저장)
         PreferredFoods: [], // 선호 음식 (배열 형태로 저장)
         TravelThemes: [], // 여행 테마 (힐링, 미식, 활력)
         GroupType: '', // 여행 인원 (가족, 친구, 연인, 혼자)
     },
 
-    // Reducer 정의
+    // 상태 변경 함수 정의
     reducers: {
         setFormStage: (state, action) => {
             state.FormStage = action.payload; // 단계 변경
