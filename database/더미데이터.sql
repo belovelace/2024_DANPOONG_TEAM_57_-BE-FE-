@@ -92,130 +92,133 @@ INSERT INTO specialties(specialties_id, specialties_name, specialties_area) VALU
 
 -- festivities 더미 데이터 
 -- 강원(1)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '화천토마토축제', '강원 화천군', 1, TO_DATE('2024-08-01', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-08-01 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-08-04 22:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '화천토마토축제', '강원 화천군', 1, TO_DATE('2024-08-01', 'YYYY-MM-DD'), TO_DATE('2024-08-04', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '얼음나라화천 산천어축제', '강원 화천군 화천천', 1, TO_DATE('2025-01-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2025-01-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2025-02-02 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '얼음나라화천 산천어축제', '강원 화천군 화천천', 1, TO_DATE('2025-01-11', 'YYYY-MM-DD'), TO_DATE('2025-02-02', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '횡성한우축제', '강원 횡성군 섬강둔치 일원', 1, TO_DATE('2024-10-02', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-02 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '횡성한우축제', '강원 횡성군 섬강둔치 일원', 1, TO_DATE('2024-10-02', 'YYYY-MM-DD'), TO_DATE('2024-10-06', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '횡성더덕축제', '강원 횡성군 청일면 농거리 축제장', 1, TO_DATE('2024-09-06', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-09-06 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-09-08 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '횡성더덕축제', '강원 횡성군 청일면 농거리 축제장', 1, TO_DATE('2024-09-06', 'YYYY-MM-DD'), TO_DATE('2024-09-08', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '청춘양구 펀치볼 시래기 사과축제', '강원 양구군 해안면 펀치볼 힐링하우스 앞 성황지', 1, TO_DATE('2024-11-01', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-11-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-03 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '청춘양구 펀치볼 시래기 사과축제', '강원 양구군 해안면 펀치볼 힐링하우스 앞 성황지', 1, TO_DATE('2024-11-01', 'YYYY-MM-DD'), TO_DATE('2024-11-03', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '철원 오대쌀 축제', '강원 철원군 은하수교 주차장 일원', 1, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '철원 오대쌀 축제', '강원 철원군 은하수교 주차장 일원', 1, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '고성통일명태축제', '강원 고성군 거진 11리 해변', 1, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '고성통일명태축제', '강원 고성군 거진 11리 해변', 1, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
 -- 광주, 전남(2)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '벌교꼬막축제', '전남 보성군 벌교읍 천변일원', 2, TO_DATE('2024-11-01', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-11-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-03 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '벌교꼬막축제', '전남 보성군 벌교읍 천변일원', 2, TO_DATE('2024-11-01', 'YYYY-MM-DD'), TO_DATE('2024-11-03', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '고흥유자축제', '전남 고흥군 풍양면 한동리 701-7번지 일원', 2, TO_DATE('2024-11-07', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-11-07 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-10 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '고흥유자축제', '전남 고흥군 풍양면 한동리 701-7번지 일원', 2, TO_DATE('2024-11-07', 'YYYY-MM-DD'), TO_DATE('2024-11-10', 'YYYY-MM-DD'));
 
 -- 대구, 경북(3)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '청도반시축제', '경북 청도 청도야외공연장', 3, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 21:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '청도반시축제', '경북 청도 청도야외공연장', 3, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '영천와인페스타', '경북 영천강변공원', 3, TO_DATE('2024-10-12', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-12 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '영천와인페스타', '경북 영천강변공원', 3, TO_DATE('2024-10-12', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '문경오미자축제', '경북 문경시 동로면 금천둔치 일원', 3, TO_DATE('2024-09-13', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-09-13 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-09-15 20:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '문경오미자축제', '경북 문경시 동로면 금천둔치 일원', 3, TO_DATE('2024-09-13', 'YYYY-MM-DD'), TO_DATE('2024-09-15', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '경북영주 풍기인삼축제', '경북 영주시 풍기인삼문화팝업공원', 3, TO_DATE('2024-10-05', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '경북영주 풍기인삼축제', '경북 영주시 풍기인삼문화팝업공원', 3, TO_DATE('2024-10-05', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '청송사과축제', '경북 청송군 용전천', 3, TO_DATE('2024-10-30', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-30 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-03 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '청송사과축제', '경북 청송군 용전천', 3, TO_DATE('2024-10-30', 'YYYY-MM-DD'), TO_DATE('2024-11-03', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '의성슈퍼푸드마늘축제', '경북 의성군 종합운동장', 3, TO_DATE('2024-10-04', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-04 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '의성슈퍼푸드마늘축제', '경북 의성군 종합운동장', 3, TO_DATE('2024-10-04', 'YYYY-MM-DD'), TO_DATE('2024-10-06', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '영천과일축제', '경북 영천강변공원 일원', 3, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-10-20 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-10-22 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '영천과일축제', '경북 영천강변공원 일원', 3, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_DATE('2023-10-22', 'YYYY-MM-DD'));
 
 -- 대전, 충남(4)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '금산세계인삼축제', '충남 금산세계인삼광장 및 인삼약초거리 일원', 4, TO_DATE('2024-10-03', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '금산세계인삼축제', '충남 금산세계인삼광장 및 인삼약초거리 일원', 4, TO_DATE('2024-10-03', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '당진해나루황토고구마홍보판촉행사', '충남 당진종합운동장 일원', 4, TO_DATE('2024-10-05', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-05 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-05 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '당진해나루황토고구마홍보판촉행사', '충남 당진종합운동장 일원', 4, TO_DATE('2024-10-05', 'YYYY-MM-DD'), TO_DATE('2024-10-05', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '연산대추축제', '충남 연산전통시장', 4, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '연산대추축제', '충남 연산전통시장', 4, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '광천 김?토굴새우젓 대축제', '충남 광천 전통시장 및 토굴마을 일원', 4, TO_DATE('2023-10-13', 'YYYY-MM-DD'), TO_TIMESTAMP('2023-10-13 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2023-10-15 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '광천 김 토굴새우젓 대축제', '충남 광천 전통시장 및 토굴마을 일원', 4, TO_DATE('2023-10-13', 'YYYY-MM-DD'), TO_DATE('2023-10-15', 'YYYY-MM-DD'));
 
 -- 부산, 경남(5)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '부산 고등어 축제', '부산 서구 송도해수욕장 및 부산 공동어시장 일원', 5, TO_DATE('2024-10-01', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-01 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-01 18:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '부산 고등어 축제', '부산 서구 송도해수욕장 및 부산 공동어시장 일원', 5, TO_DATE('2024-10-01', 'YYYY-MM-DD'), TO_DATE('2024-10-01', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '부산 자갈치 축제', '부산 중구 자갈치 시장 일원, 광복로', 5, TO_DATE('2024-10-13', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-13 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 22:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '부산 자갈치 축제', '부산 중구 자갈치 시장 일원, 광복로', 5, TO_DATE('2024-10-13', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '부산 차이나 타운 특구 문화 축제', '부산 동구 초량차이나타운특구 일원, 초량천', 5, TO_DATE('2024-10-25', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-25 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-25 20:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '부산 차이나 타운 특구 문화 축제', '부산 동구 초량차이나타운특구 일원, 초량천', 5, TO_DATE('2024-10-25', 'YYYY-MM-DD'), TO_DATE('2024-10-25', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '사천 와룡문화제', '경남 사천시 시청 광장 일원', 5, TO_DATE('2024-04-26', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-04-26 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-04-26 18:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '사천 와룡문화제', '경남 사천시 시청 광장 일원', 5, TO_DATE('2024-04-26', 'YYYY-MM-DD'), TO_DATE('2024-04-26', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '산청 황매산 철쭉제', '경남 산청군 차황면 법평리 황매산 일원', 5, TO_DATE('2024-04-27', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-04-27 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-04-27 20:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '산청 황매산 철쭉제', '경남 산청군 차황면 법평리 황매산 일원', 5, TO_DATE('2024-04-27', 'YYYY-MM-DD'), TO_DATE('2024-04-27', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '의령 홍의장군 축제', '경남 의령군 서동 생활공원 일원', 5, TO_DATE('2024-04-18', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-04-18 10:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-04-18 18:00:00', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '의령 홍의장군 축제', '경남 의령군 서동 생활공원 일원', 5, TO_DATE('2024-04-18', 'YYYY-MM-DD'), TO_DATE('2024-04-18', 'YYYY-MM-DD'));
 
 -- 인천, 경기(6)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '인천시민대축제', '인천 남동구 인천대공원', 6, TO_DATE('2024-10-04', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-04 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '인천시민대축제', '인천 남동구 인천대공원', 6, TO_DATE('2024-10-04', 'YYYY-MM-DD'), TO_DATE('2024-10-06', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '인천송도수변공원 가을음악회', '인천 송도동 송도수변공원', 6, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '인천송도수변공원 가을음악회', '인천 송도동 송도수변공원', 6, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '자라섬 꽃페스타', '경기 가평군 가평읍 자라섬로 60', 6, TO_DATE('2024-09-14', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-09-14 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '자라섬 꽃페스타', '경기 가평군 가평읍 자라섬로 60', 6, TO_DATE('2024-09-14', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '화담숲 단풍축제', '경기 광주시 도척면 도척윗로 278-1', 6, TO_DATE('2024-10-01', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-01 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-30 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '화담숲 단풍축제', '경기 광주시 도척면 도척윗로 278-1', 6, TO_DATE('2024-10-01', 'YYYY-MM-DD'), TO_DATE('2024-11-30', 'YYYY-MM-DD'));
 
 -- 전북(7)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '임실N치즈축제', '전북 임실군 임실치즈테마파크, 임실치즈마을, 임실읍 일원', 7, TO_DATE('2024-10-03', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '임실N치즈축제', '전북 임실군 임실치즈테마파크, 임실치즈마을, 임실읍 일원', 7, TO_DATE('2024-10-03', 'YYYY-MM-DD'), TO_DATE('2024-10-06', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '진안홍삼축제', '전북 진안군 마이산', 7, TO_DATE('2024-10-03', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-03 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-06 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '진안홍삼축제', '전북 진안군 마이산', 7, TO_DATE('2024-10-03', 'YYYY-MM-DD'), TO_DATE('2024-10-06', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '순창장류축제', '전북 순창군 순창고추장민속마을 및 발효테마파크 내', 7, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-13 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '순창장류축제', '전북 순창군 순창고추장민속마을 및 발효테마파크 내', 7, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-13', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '순창 떡볶이 페스타', '전북 순창군 전통고추장 민속마을 및 술창발효테마파크 일원', 7, TO_DATE('2024-11-16', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-11-16 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-17 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '순창 떡볶이 페스타', '전북 순창군 전통고추장 민속마을 및 술창발효테마파크 일원', 7, TO_DATE('2024-11-16', 'YYYY-MM-DD'), TO_DATE('2024-11-17', 'YYYY-MM-DD'));
 
 -- 제주(8)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '최남단 방어 축제', '제주 서귀포시 모슬포항', 8, TO_DATE('2024-11-28', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-11-28 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-12-01 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '최남단 방어 축제', '제주 서귀포시 모슬포항', 8, TO_DATE('2024-11-28', 'YYYY-MM-DD'), TO_DATE('2024-12-01', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '한림공원 국화축제', '제주 한림공원', 8, TO_DATE('2024-11-10', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-11-10 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-30 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '한림공원 국화축제', '제주 한림공원', 8, TO_DATE('2024-11-10', 'YYYY-MM-DD'), TO_DATE('2024-11-30', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '제주민속촌 국화축제', '제주 제주민속촌 일대', 8, TO_DATE('2024-10-25', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-25 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-11-24 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '제주민속촌 국화축제', '제주 제주민속촌 일대', 8, TO_DATE('2024-10-25', 'YYYY-MM-DD'), TO_DATE('2024-11-24', 'YYYY-MM-DD'));
 
 -- 충북(9)
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '괴산고추축제', '충북 괴산유기농엑스포광장 일원', 9, TO_DATE('2024-08-29', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-08-29 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-09-01 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '괴산고추축제', '충북 괴산유기농엑스포광장 일원', 9, TO_DATE('2024-08-29', 'YYYY-MM-DD'), TO_DATE('2024-09-01', 'YYYY-MM-DD'));
 
-INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_date, festivities_open_time, festivities_close_time)
-VALUES (festivities_seq.NEXTVAL, '보은대추 축제', '충북 보은읍 뱃들공원 및 속리산 일원', 9, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('2024-10-11 00:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_TIMESTAMP('2024-10-20 23:59:59', 'YYYY-MM-DD HH24:MI:SS'));
+INSERT INTO festivities (festivities_id, festivities_name, festivities_address, festivities_area, festivities_start_date, festivities_end_date)
+VALUES (festivities_seq.NEXTVAL, '보은대추 축제', '충북 보은읍 뱃들공원 및 속리산 일원', 9, TO_DATE('2024-10-11', 'YYYY-MM-DD'), TO_DATE('2024-10-20', 'YYYY-MM-DD'));
+
+
+
 
 -- user
 INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_id, theme_id) 
