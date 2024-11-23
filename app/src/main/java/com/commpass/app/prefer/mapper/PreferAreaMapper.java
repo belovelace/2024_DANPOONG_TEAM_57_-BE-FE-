@@ -2,17 +2,19 @@ package com.commpass.app.prefer.mapper;
 
 import com.commpass.app.prefer.vo.AreaDetailVo;
 import com.commpass.app.prefer.vo.PreferAreaVo;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
 @Mapper
 public interface PreferAreaMapper {
 
-    @Select("SELECT area_id AS areaId, area_name AS areaName FROM area")
+    @Select("SELECT * FROM area")
+    @Results({
+            @Result(property = "areaId", column = "area_id"),
+            @Result(property = "areaName", column = "area_name"),
+            // 필드명과 컬럼명을 수동으로 매핑
+    })
     List<PreferAreaVo> getAreaList();
 
 
