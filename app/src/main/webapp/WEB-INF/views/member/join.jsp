@@ -11,7 +11,7 @@
 
                 // 폼 데이터 수집
                 const formData = {
-                    id: $('#id').val(),
+                    userId: $('#id').val(),
                     pwd: $('#pwd').val(),
                     name: $('#name').val(),
                     email: $('#email').val(),

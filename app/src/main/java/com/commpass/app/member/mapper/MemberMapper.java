@@ -8,24 +8,22 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface MemberMapper {
 
-    //회원가입
+    // 회원가입
     @Insert("INSERT INTO users " +
-            "(id, pwd, name, email, age, address, gender, nick) " +
-            "VALUES (#{id}, #{pwd}, #{name}, #{email}, #{age}, #{address}, #{gender}, #{nick})")
+            "(user_id, pwd, name, email, age, address, gender, nick) " +
+            "VALUES (#{userId}, #{pwd}, #{name}, #{email}, #{age}, #{address}, #{gender}, #{nick})")
     int join(MemberVo vo);
 
-    //중복
-    @Select("SELECT COUNT(*) FROM users WHERE id = #{id}")
-    int isDuplicateId(String id);
+    // 중복 확인
+    @Select("SELECT COUNT(*) FROM users WHERE user_id = #{userId}")
+    int isDuplicateId(String userId);
 
-
-    //로그인
+    // 로그인
     @Select("""
             SELECT *
             FROM users
-            WHERE ID = #{id} AND PWD = #{pwd}
+            WHERE user_id = #{userId} AND pwd = #{pwd}
             """)
     MemberVo login(MemberVo vo);
+}
 
-
-}//class
