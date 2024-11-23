@@ -16,6 +16,10 @@ const MapPage = () => {
         height: '100vh',
     };
 
+ axios.get(('/api/prefer/area')).then((res)=>{
+    setLocations(res.data);
+ })
+
     return (
         <div style={containerStyle}>
             <Sidebar locations={locations} setLocations={setLocations} />

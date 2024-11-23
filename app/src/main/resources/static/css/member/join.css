@@ -116,3 +116,41 @@ a.logout:hover {
 .footer-container p {
     font-size: 14px;
 }
+
+/* 회원가입 폼 스타일 */
+#signupForm {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#signupForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+}
+
+#signupForm input, #signupForm select, #signupForm button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#signupForm button {
+    background-color: #ff00ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#signupForm button:hover {
+    background-color: #000;
+}
