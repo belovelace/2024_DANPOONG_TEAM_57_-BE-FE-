@@ -228,198 +228,195 @@ INSERT INTO users (user_id, pwd, name, email, age, address, gender, nick, area_i
 VALUES ('user03', 'mySecret789', '이철수', 'chulsoo@example.com', 25, '부산광역시 해운대구 센텀동 55-11', 'M', '철수네', 3, 3);
 
 -- user_selection
-
-
 -- restarurant
 -- 강원(1)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '용바위식당', '강원 인제군 북면 진부령로 107 1층', TO_DATE('08:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '황태국', 10000, 128.3675774, 38.223843, 3
-FROM specialties s WHERE s.specialties_name = '황태';
+FROM specialties s WHERE s.specialties_name = '황태' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '대관령감자옹심이', '강원 평창군 대관령면 경강로 5193 1층', TO_DATE('10:30', 'HH24:MI'), TO_DATE('19:30', 'HH24:MI'), '순옹심이', 10000, 128.6798, 37.6655, 1
-FROM specialties s WHERE s.specialties_name = '감자';
+FROM specialties s WHERE s.specialties_name = '감자' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '원주복숭아빵', '강원 원주시 한지공원길 178-1', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '원주 복숭아빵', 16000, 127.9584, 37.3291, 2
-FROM specialties s WHERE s.specialties_name = '복숭아';
+FROM specialties s WHERE s.specialties_name = '복숭아' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '송정희어머니순두부', '강원 속초시 원암학사평길 192', TO_DATE('05:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '해물 순두부', 20000, 128.19358, 37.478171, 4
-FROM specialties s WHERE s.specialties_name = '초당두부';
+FROM specialties s WHERE s.specialties_name = '초당두부' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '하누성 횡성본점', '강원 횡성군 둔내면 고원로 215', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '1++ 한우 등심', 45000, 128.891663, 37.791689, 3
-FROM specialties s WHERE s.specialties_name = '한우';
+FROM specialties s WHERE s.specialties_name = '한우' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '갤러리밥스', '강원 강릉시 난설현로 144 82-7', TO_DATE('11:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '초당옥수수커피', 6000, 128.8767, 37.7695, 1
-FROM specialties s WHERE s.specialties_name = '옥수수';
+FROM specialties s WHERE s.specialties_name = '옥수수' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '횡성더덕밥김가', '강원 원주시 행구로 238', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '어진한상', 23000, 127.9487, 37.3374, 4
-FROM specialties s WHERE s.specialties_name = '더덕';
+FROM specialties s WHERE s.specialties_name = '더덕' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '시래원', '강원 양구군 국토정중앙면 봉화산로 457', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '시래기정식', 15000, 128.1734, 38.1462, 3
-FROM specialties s WHERE s.specialties_name = '시래기';
+FROM specialties s WHERE s.specialties_name = '시래기' AND s.specialties_area = 1;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '감자적1번지', '강원 강릉시 공항길29번길 7 2층', TO_DATE('10:00', 'HH24:MI'), TO_DATE('20:30', 'HH24:MI'), '감자옹심이', 8000, 128.2495, 37.6399, 2
-FROM specialties s WHERE s.specialties_name = '감자';
+FROM specialties s WHERE s.specialties_name = '감자' AND s.specialties_area = 1;
 
 -- 광주, 전남(2)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '정가네원조꼬막회관 본점', '전남 보성군 벌교읍 조정래길 55', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '꼬막정식', 20000, 127.34002, 34.84453, 4
-FROM specialties s WHERE s.specialties_name = '꼬막';
+FROM specialties s WHERE s.specialties_name = '꼬막' AND s.specialties_area = 2;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '3917마중', '전남 나주시 향교길 42-16 교동 16', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '나주배 크림 라떼', 8000, 126.71089, 35.01569, 1
-FROM specialties s WHERE s.specialties_name = '배';
+FROM specialties s WHERE s.specialties_name = '배' AND s.specialties_area = 2;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '유자당 베이커리카페', '전남 고흥군 고흥읍 여산당촌길 50-1', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '유자 스무디', 6000, 127.28688, 34.60937, 2
-FROM specialties s WHERE s.specialties_name = '유자';
+FROM specialties s WHERE s.specialties_name = '유자' AND s.specialties_area = 2;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '강화식당', '전남 영광군 법성면 굴비로 9-2 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '보리굴비 정식', 24000, 126.51135, 35.42085, 3
-FROM specialties s WHERE s.specialties_name = '굴비';
+FROM specialties s WHERE s.specialties_name = '굴비' AND s.specialties_area = 2;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '춘운서옥카페', '전남 보성군 보성읍 송재로 211-9', TO_DATE('10:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '녹차라떼', 7500, 127.09018, 34.76963, 1
-FROM specialties s WHERE s.specialties_name = '녹차';
+FROM specialties s WHERE s.specialties_name = '녹차' AND s.specialties_area = 2;
 
 -- 대구, 경북(3)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '원리73', '경북 청도군 청도읍 새마을로 904', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '반시그릭요거트', 8500, 128.738084, 35.638922, 4
-FROM specialties s WHERE s.specialties_name = '반시';
+FROM specialties s WHERE s.specialties_name = '반시' AND s.specialties_area = 3;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '사계절대게직판장', '경북 영덕군 강구면 강구대게길 52 2층', TO_DATE('08:30', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '대게', 0, 129.3852, 36.3597, 3
-FROM specialties s WHERE s.specialties_name = '대게';
+FROM specialties s WHERE s.specialties_name = '대게' AND s.specialties_area = 3;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '마이홈제과', '경북 김천시 자산로 35', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '김천자두찰보리빵', 12000, 128.1137, 36.1387, 1
-FROM specialties s WHERE s.specialties_name = '자두';
+FROM specialties s WHERE s.specialties_name = '자두' AND s.specialties_area = 3;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '카페옐롱', '경북성주군 월항면 안포리 160-17번지', TO_DATE('10:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), '참외라떼', 5500, 128.2961, 35.9193, 2
-FROM specialties s WHERE s.specialties_name = '참외';
+FROM specialties s WHERE s.specialties_name = '참외' AND s.specialties_area = 3;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '경산대추옹골빵', '경북 경산시 중앙로 2 1층', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '옹골빵', 14000, 128.7431, 35.8258, 4
-FROM specialties s WHERE s.specialties_name = '대추';
+FROM specialties s WHERE s.specialties_name = '대추' AND s.specialties_area = 3;
 
 -- 대전, 충남(4)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '낙원약과', '충남 예산군 예산읍 예산시장길 2 108호', TO_DATE('09:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '페스츄리 사과약과', 2000, 126.8451, 36.6774, 2
-FROM specialties s WHERE s.specialties_name = '사과';
+FROM specialties s WHERE s.specialties_name = '사과' AND s.specialties_area = 4;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '할머니학화호도과자 본점', '충남 천안시 동남구 만남로 62', TO_DATE('07:00', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '호도과자', 6000, 127.1522, 36.8116, 4
-FROM specialties s WHERE s.specialties_name = '호두';
+FROM specialties s WHERE s.specialties_name = '호두' AND s.specialties_area = 4;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '주주베', '충남 논산시 연산면 황산벌로 1521', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '대추차', 6500, 127.0986, 36.1985, 3
-FROM specialties s WHERE s.specialties_name = '대추';
+FROM specialties s WHERE s.specialties_name = '대추' AND s.specialties_area = 4;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '간월도별미영양굴밥', '충남 서산시 부석면 간월도1길 69-1', TO_DATE('07:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '영양굴밥', 17000, 126.3282, 36.6888, 1
-FROM specialties s WHERE s.specialties_name = '굴';
+FROM specialties s WHERE s.specialties_name = '굴' AND s.specialties_area = 4;
 
 -- 부산, 경남(5)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '의령망개떡', '경남 의령군 의령읍 의병로18길 3-4', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '망개떡', 3000, 128.319624, 35.345301, 4
-FROM specialties s WHERE s.specialties_name = '망개떡';
+FROM specialties s WHERE s.specialties_name = '망개떡' AND s.specialties_area = 5;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '참숯골 합천본점', '경남 합천군 합천읍 옥산로 31', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '숙성삼겹', 12000, 128.178128, 35.548596, 3
-FROM specialties s WHERE s.specialties_name = '돼지';
+FROM specialties s WHERE s.specialties_name = '돼지' AND s.specialties_area = 5;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '카페유자', '경남 남해군 삼동면 동부대로 1423', TO_DATE('10:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), '카스테라 1접시', 5000, 127.9484, 34.8416, 1
-FROM specialties s WHERE s.specialties_name = '유자';
+FROM specialties s WHERE s.specialties_name = '유자' AND s.specialties_area = 5;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '맛난명태생각 공룡수산', '경남 고성군 고성읍 송학고분로358번길 56', TO_DATE('10:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '매콤 명태조림', 25000, 128.2922, 34.9741, 3
-FROM specialties s WHERE s.specialties_name = '명태';
+FROM specialties s WHERE s.specialties_name = '명태' AND s.specialties_area = 5;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '밤톨', '경남 하동군 화개면 화개로 17-1', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '밤파이', 3200, 127.8174, 35.0875, 2
-FROM specialties s WHERE s.specialties_name = '밤';
+FROM specialties s WHERE s.specialties_name = '밤' AND s.specialties_area = 5;
 
 -- 인천, 경기(6)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '흥만소', '경기 이천시 향교로 3', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '이천쌀크림빵', 3900, 127.4531, 37.2747, 1
-FROM specialties s WHERE s.specialties_name = '쌀';
+FROM specialties s WHERE s.specialties_name = '쌀' AND s.specialties_area = 6;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '연리희재', '경기 파주시 탄현면 장릉로 51번길 48-21 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:30', 'HH24:MI'), '개성주악', 2500, 126.7715, 37.7555, 3
-FROM specialties s WHERE s.specialties_name = '한과';
+FROM specialties s WHERE s.specialties_name = '한과' AND s.specialties_area = 6;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '율?당', '경기 연천군 연천읍 연천로 87 1층', TO_DATE('10:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '율무콩크림라떼', 5500, 127.067, 38.1225, 4
-FROM specialties s WHERE s.specialties_name = '율무';
+FROM specialties s WHERE s.specialties_name = '율무' AND s.specialties_area = 6;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '빌라드미엘', '경기도 의왕시 포일동 670-6', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '허니콤 화이트', 6800, 126.9852, 37.3962, 2
-FROM specialties s WHERE s.specialties_name = '꿀';
+FROM specialties s WHERE s.specialties_name = '꿀' AND s.specialties_area = 6;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '강화손칼국수 본점', '인천 강화군 양도면 강화남로 678', TO_DATE('10:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), '바지락칼국수', 10000, 126.4923, 37.7395, 3
-FROM specialties s WHERE s.specialties_name = '바지락';
+FROM specialties s WHERE s.specialties_name = '바지락' AND s.specialties_area = 6;
 
 -- 전라북도(7)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '마이담', '전북 진안군 부귀면 전진로 1947', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '홍삼시래기밥+떡갈비', 12000, 127.432469, 35.723502, 3
-FROM specialties s WHERE s.specialties_name = '홍삼';
+FROM specialties s WHERE s.specialties_name = '홍삼' AND s.specialties_area = 7;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '술고지', '전북 무주군 안성면 장무로 1375-7', TO_DATE('10:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '머루와인', 5000, 127.618055, 35.753299, 4
-FROM specialties s WHERE s.specialties_name = '머루';
+FROM specialties s WHERE s.specialties_name = '머루' AND s.specialties_area = 7;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '연다원', '전북 고창군 아산면 복분저로 184-81', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '연다원 고창 복분자라떼', 8000, 126.756384, 35.392888, 2
-FROM specialties s WHERE s.specialties_name = '복분자';
+FROM specialties s WHERE s.specialties_name = '복분자' AND s.specialties_area = 7;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '빠담빠담', '전북 장수군 계남면 장안산로 267 265', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '장수 오미자에이드', 5500, 127.676302, 35.587992, 1
-FROM specialties s WHERE s.specialties_name = '오미자';
+FROM specialties s WHERE s.specialties_name = '오미자' AND s.specialties_area = 7;
 
 -- 제주도(8)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '한라산쑥찐빵', '제주 제주시 신설로 7길 57', TO_DATE('07:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '쑥찐빵', 10000, 126.4975, 33.497, 4
-FROM specialties s WHERE s.specialties_name = '쑥';
+FROM specialties s WHERE s.specialties_name = '쑥' AND s.specialties_area = 8;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '김재훈고사리육개장', '제주 제주시 구남로4길 8-12 1층', TO_DATE('08:00', 'HH24:MI'), TO_DATE('15:00', 'HH24:MI'), '고사리육개장', 10000, 126.4989, 33.5106, 4
-FROM specialties s WHERE s.specialties_name = '고사리';
+FROM specialties s WHERE s.specialties_name = '고사리' AND s.specialties_area = 8;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '고집돌우럭 중문점', '제주 서귀포시 일주서로 879', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '런치 B', 28000, 126.5632, 33.259, 3
-FROM specialties s WHERE s.specialties_name = '옥돔';
+FROM specialties s WHERE s.specialties_name = '옥돔' AND s.specialties_area = 8;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '웨이뷰 협재바다', '제주 제주시 한림읍 옹포7길 25-3', TO_DATE('09:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '제주 천혜향 빵', 6000, 126.2718, 33.4231, 1
-FROM specialties s WHERE s.specialties_name = '감귤';
+FROM specialties s WHERE s.specialties_name = '감귤' AND s.specialties_area = 8;
 
 -- 충북(9)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '돌집 식당', '충북 단양군 단양읍 중앙2로 11', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '흑마늘 정식', 26000, 128.174026, 37.097659, 3
-FROM specialties s WHERE s.specialties_name = '마늘';
+FROM specialties s WHERE s.specialties_name = '마늘' AND s.specialties_area = 9;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '카페 해영', '충북 영동군 양강면 외만1길 34-4 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '곶감 라떼', 5500, 127.670888, 36.162939, 4
-FROM specialties s WHERE s.specialties_name = '곶감';
+FROM specialties s WHERE s.specialties_name = '곶감' AND s.specialties_area = 9;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '김우연한정식', '충북 괴산군 감물면 충민로덕운리길 15-12', TO_DATE('11:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '옥수수떡갈비정식(예약)', 20000, 127.943118, 36.732983, 4
-FROM specialties s WHERE s.specialties_name = '옥수수';
+FROM specialties s WHERE s.specialties_name = '옥수수' AND s.specialties_area = 9;
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
 SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '조은가', '충북 보은군 보은읍 삼산로 4', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '대추단팥빵', 3500, 127.719282, 36.374279, 1
-FROM specialties s WHERE s.specialties_name = '대추';
-
+FROM specialties s WHERE s.specialties_name = '대추' AND s.specialties_area = 9;
 
 
 -- 힐링 여행 ---------------------
