@@ -18,8 +18,7 @@ public class PlanDao {
     public int insertPlan(PlanVo vo) {return mapper.insertPlan(vo);}
 
 
-    public List<PlanInsertVo> PlanList(String userId) {
-    }
+    public List<PlanInsertVo> PlanList(String userId) {return mapper.PlanList(userId);}
 
     
 }//class
