@@ -62,12 +62,14 @@ CREATE TABLE category (
 CREATE TABLE user_selection (
     selection_id INT PRIMARY KEY,
     selection_date TIMESTAMP,
-    prefer_user_id INT,
+    prefer_user_id VARCHAR2(300),
     prefer_area_id INT,
     prefer_specialties_id INT,
+    prefer_theme_id INT,
     FOREIGN KEY (prefer_user_id) REFERENCES users(user_id),
     FOREIGN KEY (prefer_area_id) REFERENCES area(area_id),
-    FOREIGN KEY (prefer_specialties_id) REFERENCES specialties(specialties_id)
+    FOREIGN KEY (prefer_specialties_id) REFERENCES specialties(specialties_id),
+    FOREIGN KEY (prefer_theme_id) REFERENCES travel_theme(theme_id)
 );
 
 CREATE TABLE restaurant (
@@ -147,6 +149,18 @@ CREATE TABLE vitality_travel (
     FOREIGN KEY (theme_area) REFERENCES area(area_id),
     FOREIGN KEY (festivities_id) REFERENCES festivities(festivities_id),
     FOREIGN KEY (ctg_id) REFERENCES category(ctg_id)
+);
+
+CREATE TABLE travel_plan (
+    plan_id INT PRIMARY KEY,                   -- 계획 식별 (기본 키)
+    user_id VARCHAR2(300),                     -- 여행자 ID (users 테이블 참조)
+    budget INT,                                -- 예산
+    travel_people_ctg INT,                     -- 여행 인원 카테고리
+    theme_id INT,                              -- 여행 테마 (travel_theme 테이블 참조)
+    area_id INT,                               -- 여행지 (area 테이블 참조)
+    FOREIGN KEY (user_id) REFERENCES users(user_id),     -- users 테이블의 user_id 참조
+    FOREIGN KEY (theme_id) REFERENCES travel_theme(theme_id), -- travel_theme 테이블의 theme_id 참조
+    FOREIGN KEY (area_id) REFERENCES area(area_id)       -- area 테이블의 area_id 참조
 );
 
 -- 시퀀스 생성
