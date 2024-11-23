@@ -130,7 +130,6 @@ CREATE TABLE healing_trip (
     lng FLOAT,
     lat FLOAT,
     FOREIGN KEY (theme_area) REFERENCES area(area_id),
-    FOREIGN KEY (festivities_id) REFERENCES festivities(festivities_id),
     FOREIGN KEY (ctg_id) REFERENCES category(ctg_id)
 );
 
@@ -147,7 +146,6 @@ CREATE TABLE vitality_travel (
     lng FLOAT,
     lat FLOAT,
     FOREIGN KEY (theme_area) REFERENCES area(area_id),
-    FOREIGN KEY (festivities_id) REFERENCES festivities(festivities_id),
     FOREIGN KEY (ctg_id) REFERENCES category(ctg_id)
 );
 
