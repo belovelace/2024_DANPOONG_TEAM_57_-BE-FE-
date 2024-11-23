@@ -17,7 +17,6 @@ public class ThemeService {
 
     public List<ThemeVo> getThemeList() { return dao.getThemeList(); }
 
-
     public List<HealingThemeVo> HealingList() {return dao.getHealingList();}
 
 
