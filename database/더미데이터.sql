@@ -242,191 +242,191 @@ values (3, TO_TIMESTAMP('2024-10-15 11:00:00', 'YYYY-MM-DD HH24:MI:SS'), 3, 3, 1
 -- restarurant
 -- 강원(1)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '용바위식당', '강원 인제군 북면 진부령로 107 1층', TO_DATE('08:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '황태국', 10000, 128.3675774, 38.223843, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '용바위식당', '강원 인제군 북면 진부령로 107 1층', TO_DATE('08:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '황태국', 10000, 128.3675774, 38.223843, 3
 FROM specialties s WHERE s.specialties_name = '황태';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '대관령감자옹심이', '강원 평창군 대관령면 경강로 5193 1층', TO_DATE('10:30', 'HH24:MI'), TO_DATE('19:30', 'HH24:MI'), '순옹심이', 10000, 128.6798, 37.6655, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '대관령감자옹심이', '강원 평창군 대관령면 경강로 5193 1층', TO_DATE('10:30', 'HH24:MI'), TO_DATE('19:30', 'HH24:MI'), '순옹심이', 10000, 128.6798, 37.6655, 1
 FROM specialties s WHERE s.specialties_name = '감자';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '원주복숭아빵', '강원 원주시 한지공원길 178-1', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '원주 복숭아빵', 16000, 127.9584, 37.3291, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '원주복숭아빵', '강원 원주시 한지공원길 178-1', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '원주 복숭아빵', 16000, 127.9584, 37.3291, 2
 FROM specialties s WHERE s.specialties_name = '복숭아';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '송정희어머니순두부', '강원 속초시 원암학사평길 192', TO_DATE('05:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '해물 순두부', 20000, 128.19358, 37.478171, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '송정희어머니순두부', '강원 속초시 원암학사평길 192', TO_DATE('05:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '해물 순두부', 20000, 128.19358, 37.478171, 4
 FROM specialties s WHERE s.specialties_name = '초당두부';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '하누성 횡성본점', '강원 횡성군 둔내면 고원로 215', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '1++ 한우 등심', 45000, 128.891663, 37.791689, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '하누성 횡성본점', '강원 횡성군 둔내면 고원로 215', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '1++ 한우 등심', 45000, 128.891663, 37.791689, 3
 FROM specialties s WHERE s.specialties_name = '한우';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '갤러리밥스', '강원 강릉시 난설현로 144 82-7', TO_DATE('11:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '초당옥수수커피', 6000, 128.8767, 37.7695, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '갤러리밥스', '강원 강릉시 난설현로 144 82-7', TO_DATE('11:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '초당옥수수커피', 6000, 128.8767, 37.7695, 1
 FROM specialties s WHERE s.specialties_name = '옥수수';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '횡성더덕밥김가', '강원 원주시 행구로 238', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '어진한상', 23000, 127.9487, 37.3374, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '횡성더덕밥김가', '강원 원주시 행구로 238', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '어진한상', 23000, 127.9487, 37.3374, 4
 FROM specialties s WHERE s.specialties_name = '더덕';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '시래원', '강원 양구군 국토정중앙면 봉화산로 457', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '시래기정식', 15000, 128.1734, 38.1462, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '시래원', '강원 양구군 국토정중앙면 봉화산로 457', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '시래기정식', 15000, 128.1734, 38.1462, 3
 FROM specialties s WHERE s.specialties_name = '시래기';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 1, '감자적1번지', '강원 강릉시 공항길29번길 7 2층', TO_DATE('10:00', 'HH24:MI'), TO_DATE('20:30', 'HH24:MI'), '감자옹심이', 8000, 128.2495, 37.6399, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 1, '감자적1번지', '강원 강릉시 공항길29번길 7 2층', TO_DATE('10:00', 'HH24:MI'), TO_DATE('20:30', 'HH24:MI'), '감자옹심이', 8000, 128.2495, 37.6399, 2
 FROM specialties s WHERE s.specialties_name = '감자';
 
 -- 광주, 전남(2)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 2, '정가네원조꼬막회관 본점', '전남 보성군 벌교읍 조정래길 55', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '꼬막정식', 20000, 127.34002, 34.84453, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '정가네원조꼬막회관 본점', '전남 보성군 벌교읍 조정래길 55', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '꼬막정식', 20000, 127.34002, 34.84453, 4
 FROM specialties s WHERE s.specialties_name = '꼬막';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 2, '3917마중', '전남 나주시 향교길 42-16 교동 16', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '나주배 크림 라떼', 8000, 126.71089, 35.01569, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '3917마중', '전남 나주시 향교길 42-16 교동 16', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '나주배 크림 라떼', 8000, 126.71089, 35.01569, 1
 FROM specialties s WHERE s.specialties_name = '배';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 2, '유자당 베이커리카페', '전남 고흥군 고흥읍 여산당촌길 50-1', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '유자 스무디', 6000, 127.28688, 34.60937, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '유자당 베이커리카페', '전남 고흥군 고흥읍 여산당촌길 50-1', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '유자 스무디', 6000, 127.28688, 34.60937, 2
 FROM specialties s WHERE s.specialties_name = '유자';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 2, '강화식당', '전남 영광군 법성면 굴비로 9-2 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '보리굴비 정식', 24000, 126.51135, 35.42085, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '강화식당', '전남 영광군 법성면 굴비로 9-2 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '보리굴비 정식', 24000, 126.51135, 35.42085, 3
 FROM specialties s WHERE s.specialties_name = '굴비';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 2, '춘운서옥카페', '전남 보성군 보성읍 송재로 211-9', TO_DATE('10:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '녹차라떼', 7500, 127.09018, 34.76963, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 2, '춘운서옥카페', '전남 보성군 보성읍 송재로 211-9', TO_DATE('10:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '녹차라떼', 7500, 127.09018, 34.76963, 1
 FROM specialties s WHERE s.specialties_name = '녹차';
 
 -- 대구, 경북(3)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 3, '원리73', '경북 청도군 청도읍 새마을로 904', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '반시그릭요거트', 8500, 128.738084, 35.638922, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '원리73', '경북 청도군 청도읍 새마을로 904', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '반시그릭요거트', 8500, 128.738084, 35.638922, 4
 FROM specialties s WHERE s.specialties_name = '반시';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 3, '사계절대게직판장', '경북 영덕군 강구면 강구대게길 52 2층', TO_DATE('08:30', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '대게', 0, 129.3852, 36.3597, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '사계절대게직판장', '경북 영덕군 강구면 강구대게길 52 2층', TO_DATE('08:30', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '대게', 0, 129.3852, 36.3597, 3
 FROM specialties s WHERE s.specialties_name = '대게';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 3, '마이홈제과', '경북 김천시 자산로 35', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '김천자두찰보리빵', 12000, 128.1137, 36.1387, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '마이홈제과', '경북 김천시 자산로 35', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '김천자두찰보리빵', 12000, 128.1137, 36.1387, 1
 FROM specialties s WHERE s.specialties_name = '자두';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 3, '카페옐롱', '경북성주군 월항면 안포리 160-17번지', TO_DATE('10:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), '참외라떼', 5500, 128.2961, 35.9193, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '카페옐롱', '경북성주군 월항면 안포리 160-17번지', TO_DATE('10:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), '참외라떼', 5500, 128.2961, 35.9193, 2
 FROM specialties s WHERE s.specialties_name = '참외';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 3, '경산대추옹골빵', '경북 경산시 중앙로 2 1층', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '옹골빵', 14000, 128.7431, 35.8258, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 3, '경산대추옹골빵', '경북 경산시 중앙로 2 1층', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '옹골빵', 14000, 128.7431, 35.8258, 4
 FROM specialties s WHERE s.specialties_name = '대추';
 
 -- 대전, 충남(4)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 4, '낙원약과', '충남 예산군 예산읍 예산시장길 2 108호', TO_DATE('09:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '페스츄리 사과약과', 2000, 126.8451, 36.6774, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '낙원약과', '충남 예산군 예산읍 예산시장길 2 108호', TO_DATE('09:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '페스츄리 사과약과', 2000, 126.8451, 36.6774, 2
 FROM specialties s WHERE s.specialties_name = '사과';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 4, '할머니학화호도과자 본점', '충남 천안시 동남구 만남로 62', TO_DATE('07:00', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '호도과자', 6000, 127.1522, 36.8116, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '할머니학화호도과자 본점', '충남 천안시 동남구 만남로 62', TO_DATE('07:00', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '호도과자', 6000, 127.1522, 36.8116, 4
 FROM specialties s WHERE s.specialties_name = '호두';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 4, '주주베', '충남 논산시 연산면 황산벌로 1521', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '대추차', 6500, 127.0986, 36.1985, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '주주베', '충남 논산시 연산면 황산벌로 1521', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '대추차', 6500, 127.0986, 36.1985, 3
 FROM specialties s WHERE s.specialties_name = '대추';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 4, '간월도별미영양굴밥', '충남 서산시 부석면 간월도1길 69-1', TO_DATE('07:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '영양굴밥', 17000, 126.3282, 36.6888, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 4, '간월도별미영양굴밥', '충남 서산시 부석면 간월도1길 69-1', TO_DATE('07:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '영양굴밥', 17000, 126.3282, 36.6888, 1
 FROM specialties s WHERE s.specialties_name = '굴';
 
 -- 부산, 경남(5)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 5, '의령망개떡', '경남 의령군 의령읍 의병로18길 3-4', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '망개떡', 3000, 128.319624, 35.345301, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '의령망개떡', '경남 의령군 의령읍 의병로18길 3-4', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '망개떡', 3000, 128.319624, 35.345301, 4
 FROM specialties s WHERE s.specialties_name = '망개떡';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 5, '참숯골 합천본점', '경남 합천군 합천읍 옥산로 31', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '숙성삼겹', 12000, 128.178128, 35.548596, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '참숯골 합천본점', '경남 합천군 합천읍 옥산로 31', TO_DATE('11:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '숙성삼겹', 12000, 128.178128, 35.548596, 3
 FROM specialties s WHERE s.specialties_name = '돼지';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 5, '카페유자', '경남 남해군 삼동면 동부대로 1423', TO_DATE('10:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), '카스테라 1접시', 5000, 127.9484, 34.8416, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '카페유자', '경남 남해군 삼동면 동부대로 1423', TO_DATE('10:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), '카스테라 1접시', 5000, 127.9484, 34.8416, 1
 FROM specialties s WHERE s.specialties_name = '유자';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 5, '맛난명태생각 공룡수산', '경남 고성군 고성읍 송학고분로358번길 56', TO_DATE('10:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '매콤 명태조림', 25000, 128.2922, 34.9741, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '맛난명태생각 공룡수산', '경남 고성군 고성읍 송학고분로358번길 56', TO_DATE('10:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '매콤 명태조림', 25000, 128.2922, 34.9741, 3
 FROM specialties s WHERE s.specialties_name = '명태';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 5, '밤톨', '경남 하동군 화개면 화개로 17-1', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '밤파이', 3200, 127.8174, 35.0875, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 5, '밤톨', '경남 하동군 화개면 화개로 17-1', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '밤파이', 3200, 127.8174, 35.0875, 2
 FROM specialties s WHERE s.specialties_name = '밤';
 
 -- 인천, 경기(6)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 6, '흥만소', '경기 이천시 향교로 3', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '이천쌀크림빵', 3900, 127.4531, 37.2747, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '흥만소', '경기 이천시 향교로 3', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '이천쌀크림빵', 3900, 127.4531, 37.2747, 1
 FROM specialties s WHERE s.specialties_name = '쌀';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 6, '연리희재', '경기 파주시 탄현면 장릉로 51번길 48-21 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:30', 'HH24:MI'), '개성주악', 2500, 126.7715, 37.7555, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '연리희재', '경기 파주시 탄현면 장릉로 51번길 48-21 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('19:30', 'HH24:MI'), '개성주악', 2500, 126.7715, 37.7555, 3
 FROM specialties s WHERE s.specialties_name = '한과';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 6, '율?당', '경기 연천군 연천읍 연천로 87 1층', TO_DATE('10:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '율무콩크림라떼', 5500, 127.067, 38.1225, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '율?당', '경기 연천군 연천읍 연천로 87 1층', TO_DATE('10:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '율무콩크림라떼', 5500, 127.067, 38.1225, 4
 FROM specialties s WHERE s.specialties_name = '율무';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 6, '빌라드미엘', '경기도 의왕시 포일동 670-6', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '허니콤 화이트', 6800, 126.9852, 37.3962, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '빌라드미엘', '경기도 의왕시 포일동 670-6', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '허니콤 화이트', 6800, 126.9852, 37.3962, 2
 FROM specialties s WHERE s.specialties_name = '꿀';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 6, '강화손칼국수 본점', '인천 강화군 양도면 강화남로 678', TO_DATE('10:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), '바지락칼국수', 10000, 126.4923, 37.7395, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 6, '강화손칼국수 본점', '인천 강화군 양도면 강화남로 678', TO_DATE('10:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), '바지락칼국수', 10000, 126.4923, 37.7395, 3
 FROM specialties s WHERE s.specialties_name = '바지락';
 
 -- 전라북도(7)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 7, '마이담', '전북 진안군 부귀면 전진로 1947', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '홍삼시래기밥+떡갈비', 12000, 127.432469, 35.723502, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '마이담', '전북 진안군 부귀면 전진로 1947', TO_DATE('11:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '홍삼시래기밥+떡갈비', 12000, 127.432469, 35.723502, 3
 FROM specialties s WHERE s.specialties_name = '홍삼';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 7, '술고지', '전북 무주군 안성면 장무로 1375-7', TO_DATE('10:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '머루와인', 5000, 127.618055, 35.753299, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '술고지', '전북 무주군 안성면 장무로 1375-7', TO_DATE('10:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '머루와인', 5000, 127.618055, 35.753299, 4
 FROM specialties s WHERE s.specialties_name = '머루';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 7, '연다원', '전북 고창군 아산면 복분저로 184-81', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '연다원 고창 복분자라떼', 8000, 126.756384, 35.392888, 2
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '연다원', '전북 고창군 아산면 복분저로 184-81', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '연다원 고창 복분자라떼', 8000, 126.756384, 35.392888, 2
 FROM specialties s WHERE s.specialties_name = '복분자';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 7, '빠담빠담', '전북 장수군 계남면 장안산로 267 265', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '장수 오미자에이드', 5500, 127.676302, 35.587992, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 7, '빠담빠담', '전북 장수군 계남면 장안산로 267 265', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '장수 오미자에이드', 5500, 127.676302, 35.587992, 1
 FROM specialties s WHERE s.specialties_name = '오미자';
 
 -- 제주도(8)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 8, '한라산쑥찐빵', '제주 제주시 신설로 7길 57', TO_DATE('07:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '쑥찐빵', 10000, 126.4975, 33.497, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '한라산쑥찐빵', '제주 제주시 신설로 7길 57', TO_DATE('07:30', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), '쑥찐빵', 10000, 126.4975, 33.497, 4
 FROM specialties s WHERE s.specialties_name = '쑥';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 8, '김재훈고사리육개장', '제주 제주시 구남로4길 8-12 1층', TO_DATE('08:00', 'HH24:MI'), TO_DATE('15:00', 'HH24:MI'), '고사리육개장', 10000, 126.4989, 33.5106, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '김재훈고사리육개장', '제주 제주시 구남로4길 8-12 1층', TO_DATE('08:00', 'HH24:MI'), TO_DATE('15:00', 'HH24:MI'), '고사리육개장', 10000, 126.4989, 33.5106, 4
 FROM specialties s WHERE s.specialties_name = '고사리';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 8, '고집돌우럭 중문점', '제주 서귀포시 일주서로 879', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '런치 B', 28000, 126.5632, 33.259, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '고집돌우럭 중문점', '제주 서귀포시 일주서로 879', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:30', 'HH24:MI'), '런치 B', 28000, 126.5632, 33.259, 3
 FROM specialties s WHERE s.specialties_name = '옥돔';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 8, '웨이뷰 협재바다', '제주 제주시 한림읍 옹포7길 25-3', TO_DATE('09:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '제주 천혜향 빵', 6000, 126.2718, 33.4231, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 8, '웨이뷰 협재바다', '제주 제주시 한림읍 옹포7길 25-3', TO_DATE('09:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '제주 천혜향 빵', 6000, 126.2718, 33.4231, 1
 FROM specialties s WHERE s.specialties_name = '감귤';
 
 -- 충북(9)
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 9, '돌집 식당', '충북 단양군 단양읍 중앙2로 11', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '흑마늘 정식', 26000, 128.174026, 37.097659, 3
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '돌집 식당', '충북 단양군 단양읍 중앙2로 11', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '흑마늘 정식', 26000, 128.174026, 37.097659, 3
 FROM specialties s WHERE s.specialties_name = '마늘';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 9, '카페 해영', '충북 영동군 양강면 외만1길 34-4 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '곶감 라떼', 5500, 127.670888, 36.162939, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '카페 해영', '충북 영동군 양강면 외만1길 34-4 1층', TO_DATE('11:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), '곶감 라떼', 5500, 127.670888, 36.162939, 4
 FROM specialties s WHERE s.specialties_name = '곶감';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 9, '김우연한정식', '충북 괴산군 감물면 충민로덕운리길 15-12', TO_DATE('11:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '옥수수떡갈비정식(예약)', 20000, 127.943118, 36.732983, 4
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '김우연한정식', '충북 괴산군 감물면 충민로덕운리길 15-12', TO_DATE('11:30', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), '옥수수떡갈비정식(예약)', 20000, 127.943118, 36.732983, 4
 FROM specialties s WHERE s.specialties_name = '옥수수';
 
 INSERT into restaurant (restaurant_id, theme_id, specialties_id, area_id, restaurant_name, restaurant_address, open_time, close_time, specialty_name, specialty_price, lng, lat, ctg_id)
-SELECT seq_restaurant_id.NEXTVAL, 1, s.specialties_id, 9, '조은가', '충북 보은군 보은읍 삼산로 4', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '대추단팥빵', 3500, 127.719282, 36.374279, 1
+SELECT restaurant_seq.NEXTVAL, 1, s.specialties_id, 9, '조은가', '충북 보은군 보은읍 삼산로 4', TO_DATE('10:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), '대추단팥빵', 3500, 127.719282, 36.374279, 1
 FROM specialties s WHERE s.specialties_name = '대추';
 
 
@@ -434,211 +434,211 @@ FROM specialties s WHERE s.specialties_name = '대추';
 -- 힐링 여행 ---------------------
 -- 강원(1)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 1, '강원 춘천시 남산면 남이섬길 1', '남이섬', TO_DATE('07:30', 'HH24:MI'), TO_DATE('21:45', 'HH24:MI'), 16000, '아름다운 자연경관과 다양한 문화체험을 즐길 수 있는 섬', 2, 127.6285, 37.9005, 2);
+VALUES (healing_trip_seq.NEXTVAL, 1, '강원 춘천시 남산면 남이섬길 1', '남이섬', TO_DATE('07:30', 'HH24:MI'), TO_DATE('21:45', 'HH24:MI'), 16000, '아름다운 자연경관과 다양한 문화체험을 즐길 수 있는 섬', 2, 127.6285, 37.9005, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 1, '강원 속초시 청호동 550-14', '이바이마을', NULL, NULL, 0, '고즈넉한 동해의 풍경', 4, 128.5914, 38.2094, 2);
+VALUES (healing_trip_seq.NEXTVAL, 1, '강원 속초시 청호동 550-14', '이바이마을', NULL, NULL, 0, '고즈넉한 동해의 풍경', 4, 128.5914, 38.2094, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 1, '강원 양양군 현남면', TO_DATE('12:00', 'HH24:MI'), TO_DATE('23:59', 'HH24:MI'), NULL, NULL, '아름다운 동해 해변의 감탄의 명사', 1, 128.5652, 38.1125, 2);
+VALUES (healing_trip_seq.NEXTVAL, 1, '강원 양양군 현남면', TO_DATE('12:00', 'HH24:MI'), TO_DATE('23:59', 'HH24:MI'), NULL, NULL, '아름다운 동해 해변의 감탄의 명사', 1, 128.5652, 38.1125, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 1, '강원도 삼척시 근덕면 장호리', '장호항', NULL, NULL, 0, '동양의 나폴리', 1, 129.1868, 37.4822, 2);
+VALUES (healing_trip_seq.NEXTVAL, 1, '강원도 삼척시 근덕면 장호리', '장호항', NULL, NULL, 0, '동양의 나폴리', 1, 129.1868, 37.4822, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 1, '강원 양양군 서면 대청봉길 34', '오색탄산온천', TO_DATE('06:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 17000, '국립공원 내 자리잡은 온천', 3, 128.5142, 38.2763, 2);
+VALUES (healing_trip_seq.NEXTVAL, 1, '강원 양양군 서면 대청봉길 34', '오색탄산온천', TO_DATE('06:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 17000, '국립공원 내 자리잡은 온천', 3, 128.5142, 38.2763, 2);
 
 
 -- 광주, 전남(2)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 2, '광주 광산구 송정로8번길 13', '1913송정역시장', TO_DATE('11:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 0, '유서 깊은 산책로. 예쁘고 아기자기한 가게.', 4, 126.8549, 35.1619, 2);
+VALUES (healing_trip_seq.NEXTVAL, 2, '광주 광산구 송정로8번길 13', '1913송정역시장', TO_DATE('11:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 0, '유서 깊은 산책로. 예쁘고 아기자기한 가게.', 4, 126.8549, 35.1619, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 2, '광주 동구 및 북구', '무등산 국립공원', NULL, NULL, 6000, '광주 중심에 위치한 자연의 보물', 3, 126.9116, 35.1636, 2);
+VALUES (healing_trip_seq.NEXTVAL, 2, '광주 동구 및 북구', '무등산 국립공원', NULL, NULL, 6000, '광주 중심에 위치한 자연의 보물', 3, 126.9116, 35.1636, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 2, '광주 북구 충효샘길 7', '광주호 호수생태원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '자연 생태학습장이자 휴식공간', 1, 126.9043, 35.1735, 2);
+VALUES (healing_trip_seq.NEXTVAL, 2, '광주 북구 충효샘길 7', '광주호 호수생태원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '자연 생태학습장이자 휴식공간', 1, 126.9043, 35.1735, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 2, '전남 순천시 순천만길 513-25', '순천만습지', TO_DATE('08:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), 10000, '다양한 철새와 식물들이 공존하는 생태의 보고', 2, 127.5204, 34.9584, 2);
+VALUES (healing_trip_seq.NEXTVAL, 2, '전남 순천시 순천만길 513-25', '순천만습지', TO_DATE('08:00', 'HH24:MI'), TO_DATE('20:00', 'HH24:MI'), 10000, '다양한 철새와 식물들이 공존하는 생태의 보고', 2, 127.5204, 34.9584, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 2, '전남 순천시 국가정원1호길 47', '순천만국가정원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), 3000, '연의 아름다움과 평화로운 분위기', 3, 127.5403, 34.9599, 2);
+VALUES (healing_trip_seq.NEXTVAL, 2, '전남 순천시 국가정원1호길 47', '순천만국가정원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('21:00', 'HH24:MI'), 3000, '연의 아름다움과 평화로운 분위기', 3, 127.5403, 34.9599, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 2, '전남 담양군 담양읍 죽녹원로 119', '죽녹원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 3000, '대규모 대나무 정원', 2, 126.9875, 35.3372, 2);
+VALUES (healing_trip_seq.NEXTVAL, 2, '전남 담양군 담양읍 죽녹원로 119', '죽녹원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 3000, '대규모 대나무 정원', 2, 126.9875, 35.3372, 2);
 
 -- 대구, 경북(3)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 3, '경북 경주시 통일로 366-4', '경북천년숲공원', TO_DATE('10:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 0, '천년을 자랑하는 울창한 숲속', 3, 129.2212, 35.8451, 2);
+VALUES (healing_trip_seq.NEXTVAL, 3, '경북 경주시 통일로 366-4', '경북천년숲공원', TO_DATE('10:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 0, '천년을 자랑하는 울창한 숲속', 3, 129.2212, 35.8451, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 3, '경북 경주시 배동 454-3', '포석정', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 2000, '아름다운 자연경관과 함께 느낄 수 있는 신라 왕족의 역사적 유산', 1, 129.2148, 35.8387, 2);
+VALUES (healing_trip_seq.NEXTVAL, 3, '경북 경주시 배동 454-3', '포석정', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 2000, '아름다운 자연경관과 함께 느낄 수 있는 신라 왕족의 역사적 유산', 1, 129.2148, 35.8387, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 3, '경북 경주시 교동 274', '월정', TO_DATE('09:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 0, '고요한 분위기 속에서 어우러지는 역사와 자연', 2, 129.2252, 35.848, 2);
+VALUES (healing_trip_seq.NEXTVAL, 3, '경북 경주시 교동 274', '월정', TO_DATE('09:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 0, '고요한 분위기 속에서 어우러지는 역사와 자연', 2, 129.2252, 35.848, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 3, '경북 상주시 은척면 남곡리 산 50번지 일원', '상주시힐링센타', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '다양한 체험을 통한 몸과 마음의 치유', 3, 128.1377, 36.3962, 2);
+VALUES (healing_trip_seq.NEXTVAL, 3, '경북 상주시 은척면 남곡리 산 50번지 일원', '상주시힐링센타', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '다양한 체험을 통한 몸과 마음의 치유', 3, 128.1377, 36.3962, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 3, '대구 달서구 화암로 342 대구수목원관리사무소', '대구수목원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '도시 속에서 만끽할 수 있는 자연', 3, 128.5199, 35.8575, 2);
+VALUES (healing_trip_seq.NEXTVAL, 3, '대구 달서구 화암로 342 대구수목원관리사무소', '대구수목원', TO_DATE('09:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '도시 속에서 만끽할 수 있는 자연', 3, 128.5199, 35.8575, 2);
 
 -- 대전, 충남(4)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 4, '대전 유성구 어은로 27', '유림공원', NULL, NULL, 0, '녹지와 산책로가 조화로운 도시 공원', 1, 127.3581, 36.3541, 2);
+VALUES (healing_trip_seq.NEXTVAL, 4, '대전 유성구 어은로 27', '유림공원', NULL, NULL, 0, '녹지와 산책로가 조화로운 도시 공원', 1, 127.3581, 36.3541, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 4, '대전 서구 둔산대로 157', '이응노 미술관', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 1000, '한국 현대미술의 거장 이응노의 작품을 중심으로 열리는 다양한 미술 전시', 2, 127.3844, 36.3527, 2);
+VALUES (healing_trip_seq.NEXTVAL, 4, '대전 서구 둔산대로 157', '이응노 미술관', TO_DATE('10:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 1000, '한국 현대미술의 거장 이응노의 작품을 중심으로 열리는 다양한 미술 전시', 2, 127.3844, 36.3527, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 4, '충남 서산시 부석면 간월도1길 119-29', '간월암', NULL, NULL, 0, '서산의 아름다운 바다를 배경으로 한 조용한 사찰', 3, 126.4111, 36.6037, 2);
+VALUES (healing_trip_seq.NEXTVAL, 4, '충남 서산시 부석면 간월도1길 119-29', '간월암', NULL, NULL, 0, '서산의 아름다운 바다를 배경으로 한 조용한 사찰', 3, 126.4111, 36.6037, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 4, '충남 서천군 장항산단로 34번길 122-16', '장항 스카이워크', TO_DATE('09:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 4000, '스릴 넘치는 투명한 바닥을 통한 특별한 경험', 4, 126.6372, 36.0654, 2);
+VALUES (healing_trip_seq.NEXTVAL, 4, '충남 서천군 장항산단로 34번길 122-16', '장항 스카이워크', TO_DATE('09:30', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 4000, '스릴 넘치는 투명한 바닥을 통한 특별한 경험', 4, 126.6372, 36.0654, 2);
 
 -- 부산, 경남(5)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 5, '부산 기장군 기장읍 용궁길 86', '해동 용궁사', TO_DATE('4:30', 'HH24:MI'), TO_DATE('19:20', 'HH24:MI'), 0, '아름다운 해안선과 함께 신성한 분위기의 사찰', 3, 129.183058, 35.254855, 2);
+VALUES (healing_trip_seq.NEXTVAL, 5, '부산 기장군 기장읍 용궁길 86', '해동 용궁사', TO_DATE('4:30', 'HH24:MI'), TO_DATE('19:20', 'HH24:MI'), 0, '아름다운 해안선과 함께 신성한 분위기의 사찰', 3, 129.183058, 35.254855, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 5, '부산 기장군 철마면 미동길 37-1', '아홉산숲', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 8000, '울창한 숲과 맑은 공기', 2, 129.213408, 35.214418, 2);
+VALUES (healing_trip_seq.NEXTVAL, 5, '부산 기장군 철마면 미동길 37-1', '아홉산숲', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 8000, '울창한 숲과 맑은 공기', 2, 129.213408, 35.214418, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 5, '경남 합천군 가회면 황매산공원길 4', '황매산군립공원', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '사계절 아름다운 풍경과 다양한 등산로를 갖춘 자연보호구역', 1, 128.137614, 35.310747, 2);
+VALUES (healing_trip_seq.NEXTVAL, 5, '경남 합천군 가회면 황매산공원길 4', '황매산군립공원', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '사계절 아름다운 풍경과 다양한 등산로를 갖춘 자연보호구역', 1, 128.137614, 35.310747, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 5, '경남 남해군 상주면 보리암로 665', '금산 보리암', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 1000, '남해의 바다를 내려다보며 함께할 수 있는 고요한 사찰', 4, 127.887843, 34.801189, 2);
+VALUES (healing_trip_seq.NEXTVAL, 5, '경남 남해군 상주면 보리암로 665', '금산 보리암', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 1000, '남해의 바다를 내려다보며 함께할 수 있는 고요한 사찰', 4, 127.887843, 34.801189, 2);
 
 -- 인천, 경기(6)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 6, '인천 강화군 삼산난로828번길 44', '보문사', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 2000, '평화로운 산책과 기도를 위한 명소', 1, 126.491, 37.7105, 2);
+VALUES (healing_trip_seq.NEXTVAL, 6, '인천 강화군 삼산난로828번길 44', '보문사', TO_DATE('9:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 2000, '평화로운 산책과 기도를 위한 명소', 1, 126.491, 37.7105, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key)
-VALUES (seq_theme_id.NEXTVAL, 6, '경기 가평군 조종면 현등사길 34', '현등사', TO_DATE('6:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), 0, '고요한 산속의께 힐링', 3, 127.457845, 37.74466, 2);
+VALUES (healing_trip_seq.NEXTVAL, 6, '경기 가평군 조종면 현등사길 34', '현등사', TO_DATE('6:00', 'HH24:MI'), TO_DATE('19:00', 'HH24:MI'), 0, '고요한 산속의께 힐링', 3, 127.457845, 37.74466, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key)
-VALUES (seq_theme_id.NEXTVAL, 6, '경기 가평군 상면 역촌길 84-14', '이천보 고가', NULL, NULL, 0, '자연을 배경으로 드라이브', 4, 127.488345, 37.720084, 2);
+VALUES (healing_trip_seq.NEXTVAL, 6, '경기 가평군 상면 역촌길 84-14', '이천보 고가', NULL, NULL, 0, '자연을 배경으로 드라이브', 4, 127.488345, 37.720084, 2);
 
 -- 전북(7)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 7, '전북 남원시 양림김 48-63 남원항공우주천문대', '남원항공우주천문대', TO_DATE('10:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 4000, '별과 우주를 가까이에서 관찰할 수 있는 공간', 2, 127.3931, 35.3744, 2);
+VALUES (healing_trip_seq.NEXTVAL, 7, '전북 남원시 양림김 48-63 남원항공우주천문대', '남원항공우주천문대', TO_DATE('10:00', 'HH24:MI'), TO_DATE('22:00', 'HH24:MI'), 4000, '별과 우주를 가까이에서 관찰할 수 있는 공간', 2, 127.3931, 35.3744, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 7, '전북 군산시 옥도면 선유남길 34-22', '선유도', NULL, NULL, 0, '아름다운 해변과 자연 경관이 어우러진 섬', 4, 126.7675, 35.6366, 2);
+VALUES (healing_trip_seq.NEXTVAL, 7, '전북 군산시 옥도면 선유남길 34-22', '선유도', NULL, NULL, 0, '아름다운 해변과 자연 경관이 어우러진 섬', 4, 126.7675, 35.6366, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 7, '전북 부안군 내소사로 191 내소사매표소', '내소사', TO_DATE('7:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '고즈넉한 분위기 속의 역사적인 사찰', 3, 126.5734, 35.7203, 2);
+VALUES (healing_trip_seq.NEXTVAL, 7, '전북 부안군 내소사로 191 내소사매표소', '내소사', TO_DATE('7:00', 'HH24:MI'), TO_DATE('18:00', 'HH24:MI'), 0, '고즈넉한 분위기 속의 역사적인 사찰', 3, 126.5734, 35.7203, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 7, '전북 전주시 완산구 태조로 51', '전주전동성당', TO_DATE('9:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 0, '고풍스러운 건축물과 함께 역사적인 가치를 지닌 성당', 1, 127.1506, 35.8184, 2);
+VALUES (healing_trip_seq.NEXTVAL, 7, '전북 전주시 완산구 태조로 51', '전주전동성당', TO_DATE('9:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 0, '고풍스러운 건축물과 함께 역사적인 가치를 지닌 성당', 1, 127.1506, 35.8184, 2);
 
 -- 제주(8)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 8, '제주 서귀포시 안덕면 사계리 118-3', '용머리해안', TO_DATE('9:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 2000, '용이 머리를 내밀듯한 형상과 함께 신비로운 풍경', 2, 126.3093, 33.2295, 2);
+VALUES (healing_trip_seq.NEXTVAL, 8, '제주 서귀포시 안덕면 사계리 118-3', '용머리해안', TO_DATE('9:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 2000, '용이 머리를 내밀듯한 형상과 함께 신비로운 풍경', 2, 126.3093, 33.2295, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 8, '제주 서귀포시 성산읍 섭지코지로 107', '섭지코지', NULL, NULL, 0, '해안선을 따라 걷는 즐거움', 3, 126.9309, 33.4671, 2);
+VALUES (healing_trip_seq.NEXTVAL, 8, '제주 서귀포시 성산읍 섭지코지로 107', '섭지코지', NULL, NULL, 0, '해안선을 따라 걷는 즐거움', 3, 126.9309, 33.4671, 2);
 
 -- 충북(9)
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key) 
-VALUES (seq_theme_id.NEXTVAL, 9, '충북 진천군 초평면 화산리 산51-9', '한반도지형전망공원', TO_DATE('9:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 0, '한반도의 형태를 형상화한 지형', 3, 127.4101, 36.8649, 2);
+VALUES (healing_trip_seq.NEXTVAL, 9, '충북 진천군 초평면 화산리 산51-9', '한반도지형전망공원', TO_DATE('9:00', 'HH24:MI'), TO_DATE('17:00', 'HH24:MI'), 0, '한반도의 형태를 형상화한 지형', 3, 127.4101, 36.8649, 2);
 
 INSERT INTO healing_trip (theme_id, theme_area, theme_address, theme_name, open_time, close_time, price_per_p, content, ctg_id, lng, lat, theme_key)
-VALUES (seq_theme_id.NEXTVAL, 9, '충북 괴산군 문광면 양곡리 16', '괴산 문광저수지', NULL, NULL, 0, '고요한 호수에서 평화로운 산책과 자연을 만끽', 2, 127.9995, 36.7463, 2);
+VALUES (healing_trip_seq.NEXTVAL, 9, '충북 괴산군 문광면 양곡리 16', '괴산 문광저수지', NULL, NULL, 0, '고요한 호수에서 평화로운 산책과 자연을 만끽', 2, 127.9995, 36.7463, 2);
 
 
 
 -- rental_home
 -- 강원도(1)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '세인트존스호텔', 175455, '033-660-9000', TO_TIMESTAMP('16:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 1);
+VALUES (rental_home_seq.NEXTVAL, '세인트존스호텔', 175455, '033-660-9000', TO_TIMESTAMP('16:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 1);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '쏠비치 삼척', 210494, '1588-4888', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 1);
+VALUES (rental_home_seq.NEXTVAL, '쏠비치 삼척', 210494, '1588-4888', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 1);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '스카이베이호텔 경포', 204628, '033-923-2000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 1);
+VALUES (rental_home_seq.NEXTVAL, '스카이베이호텔 경포', 204628, '033-923-2000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 1);
 
 -- 광주, 전남(2)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '유탑부티크호텔, 레지던스', 109607, '062-370-8000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 2);
+VALUES (rental_home_seq.NEXTVAL, '유탑부티크호텔, 레지던스', 109607, '062-370-8000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 2);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '홀리데이인 광주호텔', 126839, '062-610-7000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 2);
+VALUES (rental_home_seq.NEXTVAL, '홀리데이인 광주호텔', 126839, '062-610-7000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 2);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '서정적인호텔', 80000, '0507-1328-6355', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 2);
+VALUES (rental_home_seq.NEXTVAL, '서정적인호텔', 80000, '0507-1328-6355', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 2);
 
 -- 대구, 경북(3)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '호텔인터불고 대구', 200000, '0507-1433-7114', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 3);
+VALUES (rental_home_seq.NEXTVAL, '호텔인터불고 대구', 200000, '0507-1433-7114', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 3);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '인터불고 엑스코 호텔', 99536, '053-380-0114', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 3);
+VALUES (rental_home_seq.NEXTVAL, '인터불고 엑스코 호텔', 99536, '053-380-0114', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 3);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '대구 메리어트 호텔', 300000, '053-327-7000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 3);
+VALUES (rental_home_seq.NEXTVAL, '대구 메리어트 호텔', 300000, '053-327-7000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 3);
 
 -- 대전, 충남(4)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '호텔인더시티', 123306, '042-600-6000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 4);
+VALUES (rental_home_seq.NEXTVAL, '호텔인더시티', 123306, '042-600-6000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 4);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '호텔 오노마 대전', 281818, '042-259-8007', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 4);
+VALUES (rental_home_seq.NEXTVAL, '호텔 오노마 대전', 281818, '042-259-8007', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 4);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '롯데시티호텔', 189999, '042-333-1000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 4);
+VALUES (rental_home_seq.NEXTVAL, '롯데시티호텔', 189999, '042-333-1000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 4);
 
 -- 부산, 경남(5)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '파라다이스 호텔 부산', 400000, '051-742-2121', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 5);
+VALUES (rental_home_seq.NEXTVAL, '파라다이스 호텔 부산', 400000, '051-742-2121', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 5);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '아난티 앳 부산 코브', 393388, '051-509-1111', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 5);
+VALUES (rental_home_seq.NEXTVAL, '아난티 앳 부산 코브', 393388, '051-509-1111', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 5);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '그랜드 조선 부산', 405000, '051-922-5000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 5);
+VALUES (rental_home_seq.NEXTVAL, '그랜드 조선 부산', 405000, '051-922-5000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 5);
 
 -- 인천, 경기(6)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '테이크 호텔', 154545, '0507-1485-7100', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 6);
+VALUES (rental_home_seq.NEXTVAL, '테이크 호텔', 154545, '0507-1485-7100', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 6);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '롤링힐스 호텔', 200000, '031-268-1000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 6);
+VALUES (rental_home_seq.NEXTVAL, '롤링힐스 호텔', 200000, '031-268-1000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 6);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '곤지암리조트', 145413, '02-1661-8787', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 6);
+VALUES (rental_home_seq.NEXTVAL, '곤지암리조트', 145413, '02-1661-8787', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 6);
 
 -- 전라북도(7)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '무주 덕유산 리조트', 160000, '063-322-9000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 7);
+VALUES (rental_home_seq.NEXTVAL, '무주 덕유산 리조트', 160000, '063-322-9000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 7);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '리한호텔 전주', 354545, '063-232-7000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 7);
+VALUES (rental_home_seq.NEXTVAL, '리한호텔 전주', 354545, '063-232-7000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 7);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '소노벨 변산', 173553, '1588-4888', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 7);
+VALUES (rental_home_seq.NEXTVAL, '소노벨 변산', 173553, '1588-4888', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 7);
 
 -- 제주도(8)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '그랜드 조선 제주', 271818, '064-738-6600', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 8);
+VALUES (rental_home_seq.NEXTVAL, '그랜드 조선 제주', 271818, '064-738-6600', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 8);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '롯데호텔 제주', 211534, '064-731-1000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 8);
+VALUES (rental_home_seq.NEXTVAL, '롯데호텔 제주', 211534, '064-731-1000', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 8);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '제주신라호텔', 290264, '064-735-5114', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 8);
+VALUES (rental_home_seq.NEXTVAL, '제주신라호텔', 290264, '064-735-5114', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 8);
 
 -- 충청북도(9)
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '청풍호반 오토캠핑장', 55000, '0507-1416-7170', TO_TIMESTAMP('14:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 9);
+VALUES (rental_home_seq.NEXTVAL, '청풍호반 오토캠핑장', 55000, '0507-1416-7170', TO_TIMESTAMP('14:00', 'HH24:MI'), TO_TIMESTAMP('12:00', 'HH24:MI'), 9);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '라온 풀빌라', 180000, '0507-1375-5513', TO_TIMESTAMP('15:30', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 9);
+VALUES (rental_home_seq.NEXTVAL, '라온 풀빌라', 180000, '0507-1375-5513', TO_TIMESTAMP('15:30', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 9);
 
 INSERT INTO rental_home (rental_id, rental_name, rental_price, rental_tel, check_in_time, check_out_time, area_id) 
-VALUES (seq_rental_id.NEXTVAL, '스테이오힐 풀빌라 펜션', 220000, '0507-1384-3155', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 9);
+VALUES (rental_home_seq.NEXTVAL, '스테이오힐 풀빌라 펜션', 220000, '0507-1384-3155', TO_TIMESTAMP('15:00', 'HH24:MI'), TO_TIMESTAMP('11:00', 'HH24:MI'), 9);
 
 -- 활력여행
 -- 강원도(1)
