@@ -1,5 +1,6 @@
 package com.commpass.app.theme.mapper;
 
+import com.commpass.app.theme.vo.HealingThemeVo;
 import com.commpass.app.theme.vo.ThemeVo;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -14,7 +15,7 @@ public interface ThemeMapper {
     List<ThemeVo> getThemeList();
 
     @Select("SELECT theme_id, theme_area, theme_name, lng, lat  FROM healing_trip ")
-    List<ThemeVo> getHealingList();
+    List<HealingThemeVo> getHealingList();
 
 
 }

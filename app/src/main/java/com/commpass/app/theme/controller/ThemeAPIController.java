@@ -2,6 +2,7 @@ package com.commpass.app.theme.controller;
 
 import com.commpass.app.prefer.vo.PreferAreaVo;
 import com.commpass.app.theme.service.ThemeService;
+import com.commpass.app.theme.vo.HealingThemeVo;
 import com.commpass.app.theme.vo.ThemeVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -27,8 +28,8 @@ public class ThemeAPIController {
 
     //힐링테마 조회
     @GetMapping("healingList")
-    public List<ThemeVo> getHealingList(){
-        List<ThemeVo> voList = service.HealingList();
+    public List<HealingThemeVo> getHealingList(){
+        List<HealingThemeVo> voList = service.HealingList();
         return voList;
     }
 
