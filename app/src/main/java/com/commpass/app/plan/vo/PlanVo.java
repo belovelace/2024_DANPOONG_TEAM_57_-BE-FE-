@@ -6,6 +6,9 @@ import lombok.Data;
 public class PlanVo {
 
 
+    // 계획 식별자
+    private int planId;
+
     // 여행자 ID (users 테이블 참조)
     private String userId;
 
@@ -21,7 +24,8 @@ public class PlanVo {
     // 여행지 ID (area 테이블 참조)
     private int areaId;
 
-    public PlanVo( String userId, int budget, int travelPeopleCtg, int themeId, int areaId) {
+    public PlanVo(int planId, String userId, int budget, int travelPeopleCtg, int themeId, int areaId) {
+        this.planId = planId;
         this.userId = userId;
         this.budget = budget;
         this.travelPeopleCtg = travelPeopleCtg;
@@ -30,4 +34,4 @@ public class PlanVo {
     }
 
 
-}//class
+}
