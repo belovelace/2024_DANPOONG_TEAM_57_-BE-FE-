@@ -25,4 +25,13 @@ public class FestivitiesVo {
     // 축제 마지막 날짜
     private Date endDate;
 
+    // 생성자
+    public FestivitiesVo(int festivitiesId, String festivitiesName, int festivitiesArea, Date startDate, Date endDate) {
+        this.festivitiesId = festivitiesId;
+        this.festivitiesName = festivitiesName;
+        this.festivitiesArea = festivitiesArea;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
 }

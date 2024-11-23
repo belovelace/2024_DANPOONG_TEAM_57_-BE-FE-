@@ -14,6 +14,6 @@ public class FestivitiesController {
     @GetMapping("/all")
     public String all() {return "festivities/Allfestivities";}
 
-
+    
 
 }
