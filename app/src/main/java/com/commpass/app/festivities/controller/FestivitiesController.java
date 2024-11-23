@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FestivitiesController {
 
     // 전체 축제 조회
-    @GetMapping("/all")
-    public String all() {return "festivities/Allfestivities";}
+    @GetMapping("all")
+    public String allFestivities() {return "festivities/Allfestivities";}
 
     
-
 }

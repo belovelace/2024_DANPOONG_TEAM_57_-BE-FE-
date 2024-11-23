@@ -5,6 +5,7 @@ import com.commpass.app.festivities.vo.FestivitiesVo;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -14,12 +15,12 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FestivitiesApiController {
 
-    private final FestivitiesApiController service;
+    private final FestivitiesService service;
 
     // 축제 조회
     @GetMapping("area")
-    public List<FestivitiesVo> getFestivitiesList() {
-        List<FestivitiesVo> voList = service.getFestivitiesList();
+    public List<FestivitiesVo> getFestivitiesList(@RequestParam int areaId) {
+        List<FestivitiesVo> voList = service.getFestivitiesList(areaId);
         return voList;
     }
 
