@@ -25,7 +25,7 @@ public class PreferAreaController {
     }
 
     //지역 별로 조회
-    @GetMapping
+    @GetMapping("detail/area")
     public List<AreaDetailVo> getAreaDetailList(){
         List<AreaDetailVo> voList = service.getAreaDetailList();
         return voList;
